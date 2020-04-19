@@ -8,12 +8,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
         media="all">
+        <%- include('../layout/head') %>
 
     <title>About Us</title>
 </head>
 
 <body>
     <header>
+        <%- include('../layout/header') %>
+
         <div class="header-div">
             <a href="#about" class="hvr-icon-hang" id="a_header">
                 About Us <i class="fa fa-chevron-down hvr-icon"></i>
@@ -147,7 +150,12 @@
         </section>
 
     </main>
-    <footer></footer>
+    <footer>
+        <%- include('../layout/footer') %>
+
+    </footer>
+    <%- include('../layout/js-links') %>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
