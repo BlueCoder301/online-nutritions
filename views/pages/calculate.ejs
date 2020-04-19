@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,165 +9,156 @@
     <link rel="stylesheet" href="./style/calculate.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
+
 <body>
     <main>
-<!-----------------------------------------------------USER INFORMATION--------------------------------------------->
-        <center> 
-             <form action="/" method="post" class="username">
-            <label for="user">User name :</label>
-            <input type="text" name="previousUsername" id="user" placeholder="Enter your user name" required>
-            <br>
-            <input type="submit" value="submit">
-              </form>
-           </center>
-<!--------------------------------------------------END OF USER INFORMATION----------------------------------------->
+        <!-----------------------------------------------------USER INFORMATION--------------------------------------------->
+        <center>
+            <form action="/" method="post" class="username">
+                <label for="user">User name :</label>
+                <input type="text" name="previousUsername" id="user" placeholder="Enter your user name" required>
+                <br>
+                <input type="submit" value="Get my information">
+            </form>
+        </center>
+        <!--------------------------------------------------END OF USER INFORMATION----------------------------------------->
 
-<!-----------------------------------------------------BMI INFORMATION---------------------------------------------->
+        <!-----------------------------------------------------BMI INFORMATION---------------------------------------------->
 
-        <center> <form action="/info" class="informationForm" method="POST">
-        <fieldset> <legend> Body Mass Index  </legend>
-            <div>
-             <label for="username">User name :</label>
-            <input type="text" id="username" name="username" placeholder="Enter your user name" required>
-            </div>
-            <br>
-            <div>
-            <label for="weight">Weight :</label>
-            <input type="text" id="weight" name="weight" placeholder="Your weight in Kg ex:65" required>
-           </div>
-            <br>
-            <div>
-            <label for="height"> Height :</label>
-            <input type="text" id="height" name="height" placeholder="Your height in cm ex:165" required>
-            </div> 
-            <br>
-            <label for="age"> Age :</label>
-            <input type="text" id="age" name="age" placeholder="Your age ex:20" required>
-            <br>
-            
-            <label for="gender"> Gender :</label>
-        
-            <label for="male"><span>Male :</span></label>
-            <input type="radio" name="gender" id="male" class="gender" value="m" required>
+        <center>
+            <form action="/info" class="informationForm" method="POST">
+                <fieldset>
+                    <legend> Body Mass Index </legend>
+                    <div>
+                        <label for="username">User name :</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your user name" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="weight">Weight :</label>
+                        <input type="text" id="weight" name="weight" placeholder="Your weight in Kg ex:65" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="height"> Height :</label>
+                        <input type="text" id="height" name="height" placeholder="Your height in cm ex:165" required>
+                    </div>
+                    <br>
+                    <label for="age"> Age :</label>
+                    <input type="text" id="age" name="age" placeholder="Your age ex:20" required>
+                    <br>
 
-            <label for="female"><span>Female :</span></label>
-            <input type="radio" name="gender" id="female" class="gender" value="f" required>
-           
-<!----------------------------------------------END OF BMI INFORMATION---------------------------------------------->
-      
-        </fieldset>
-        
-        </form></center>
-        <center><input type="submit" class="calc" value="Calculate"></center>
-        
+                    <label for="gender"> Gender :</label>
+
+                    <label for="male"><span>Male :</span></label>
+                    <input type="radio" name="gender" id="male" class="gender" value="m" required>
+
+                    <label for="female"><span>Female :</span></label>
+                    <input type="radio" name="gender" id="female" class="gender" value="f" required>
+                    <input type="submit" class="calc" value="Calculate">
+                    <!----------------------------------------------END OF BMI INFORMATION---------------------------------------------->
+
+                </fieldset>
+
+            </form>
+        </center>
+
+
 
         <center><input type="submit" class="previous" value="Do you have a previous Username?"></center>
-<!---------------------------------------------Calculation INFORMATION---------------------------------------------->
+        <!---------------------------------------------Calculation INFORMATION---------------------------------------------->
 
-  <h2>Status:  <%= info.bmi.status%></h2>
-<h2>Risk:  <%= info.bmi.risk%></h2>
-<h2>Ideal Weight:  <%= info.ideal_weight%></h2>
-<h2>surface_area:  <%= info.surface_area%></h2>
-<h2>Calories per day to lose Weight:  <%= info.bmr.value%></h2>
+        <% if(locals.info){ %>
+        <h2>Status:  <%= info.bmi.status%></h2>
+        <h2>Risk:  <%= info.bmi.risk%></h2>
+        <h2>Ideal Weight:  <%= info.ideal_weight%></h2>
+        <h2>Calories per day to lose Weight:  <%= info.bmr.value%></h2>
+        <% } %>
+        <center><input type="submit" class="diet" value="Lets Start Diets"></center>
 
-<input  type="submit" class="diet" value="Lets Start Diets">
-
-<form class="radioDiet" action="/diet" method="get">
-   <label> Choose the type of diet</label><br>
-   <label >
-       <span>Keto</span>
-       <input type="radio" name="diet" value="keto" required>
-   </label>
-   <br>
-   <label >
-       <span>Paleo</span>
-       <input type="radio" name="diet" value="paleo" required>
-   </label><br>
-   <label >
-       <span>Vegetarian</span>
-       <input type="radio" name="diet" value="vegetarian" required>
-   </label>
-   <br>
-   <label >
-       <span>Vegan</span>
-       <input type="radio" name="diet" value="vegan" required>
-   </label><br>
-   <label >
-       <span>Mediterranean</span>
-       <input type="radio" name="diet" value="mediterranean" required>
-   </label>
-   <br>
-   <label >
-       <span>Raw</span>
-       <input type="radio" name="diet" value="raw" required>
-   </label><br>
-   <label >
-       <span>Low Carb</span>
-       <input type="radio" name="diet" value="low_carb" required>
-   </label>
-   <br>
-   <label >
-       <span>No Sugar</span>
-       <input type="radio" name="diet" value="no_sugar" required>
-   </label><br>
-   <input type="submit" value="Lets start your diet">
-</form>
-<!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
-
-<!--------------------------------------------------SEARCH INFORMATION---------------------------------------------->
-<form action="/search" method="get">
-    <input type="text" name="search" placeholder="Search for food" required>
-    <input type="submit" value="Search">
-
-</form>
+        <form class="radioDiet" action="/diet" method="get">
+            <label> Choose the type of diet</label><br>
+            <label>
+                <span>Keto</span>
+                <input type="radio" name="diet" value="keto" required>
+            </label>
+            <br>
+            <label>
+                <span>Paleo</span>
+                <input type="radio" name="diet" value="paleo" required>
+            </label><br>
+            <label>
+                <span>Vegetarian</span>
+                <input type="radio" name="diet" value="vegetarian" required>
+            </label>
+            <br>
+            <label>
+                <span>Vegan</span>
+                <input type="radio" name="diet" value="vegan" required>
+            </label><br>
+            <label>
+                <span>Mediterranean</span>
+                <input type="radio" name="diet" value="mediterranean" required>
+            </label>
+            <br>
+            <label>
+                <span>Raw</span>
+                <input type="radio" name="diet" value="raw" required>
+            </label><br>
+            <label>
+                <span>Low Carb</span>
+                <input type="radio" name="diet" value="low_carb" required>
+            </label>
+            <br>
+            <label>
+                <span>No Sugar</span>
+                <input type="radio" name="diet" value="no_sugar" required>
+            </label><br>
+            <input type="submit" value="Lets start your diet">
+        </form>
+        <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
 
 
-<!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum asperiores, excepturi nobis repudiandae iure autem aut maxime sint dolor a quod neque maiores, quam delectus quibusdam ab omnis eum? Distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea eum, at voluptatem quia, distinctio non illo, sed dolores voluptate tempora exercitationem repellat ratione facere reprehenderit dolorum. Enim, suscipit odit!
+
+
+        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum asperiores, excepturi nobis repudiandae iure autem aut maxime sint dolor a quod neque maiores, quam delectus quibusdam ab omnis eum? Distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea eum, at voluptatem quia, distinctio non illo, sed dolores voluptate tempora exercitationem repellat ratione facere reprehenderit dolorum. Enim, suscipit odit!
 
 </p> -->
-<!------------------------------------------------END OF SEARCH INFORMATION----------------------------------------->
+        <!------------------------------------------------END OF SEARCH INFORMATION----------------------------------------->
 
 
 
 
-<!------------------------------------------------DATABASE INFORMATION---------------------------------------------->
+        <!------------------------------------------------DATABASE INFORMATION---------------------------------------------->
 
-</form>
-<% if (locals.DB) { %>
-    <% var x=''; %>
-    <% if(DB.gender == 'm')  x = 'Male'; %>
-    <% if(DB.gender == 'f')  x = 'Female'; %>
-    <h4>Your username: <%= DB.user_name%></h4>
-    <h4>your weight: <%= DB.weight%></h4>
-    <h4>Your height: <%= DB.height%></h4>
-    <h4>Your age: <%= DB.age%></h4>
-    <h4>Your gender: <%= x %></h4>
-   <% } %>
-<!---------------------------------------------END OF DATABASE INFORMATION------------------------------------------->
+        </form>
 
-        </main> 
-        
-        <script>
-            // If the user had registered already the calculation form will be hidden
-            $(".username").hide();
-            $(".informationForm").show();
-            $(".previous").on('click',function(){
-                $(".username").toggle();
-                $(".informationForm").toggle();
-               })
-            // Hide let's start diet button
-                $(".diet").hide();
-                $('.calc').on('click', function(){
-                $(".diet").show();  
-                })
+        <!---------------------------------------------END OF DATABASE INFORMATION------------------------------------------->
 
-                 // This selection will be hidden untill the calculation results is shown
-                 $(".radioDiet").hide();
-                  $(".diet").on('click',function(){
-                      $(".radioDiet").toggle();
-                      })
-                     </script>
+    </main>
 
-    
+    <script>
+        // If the user had registered already the calculation form will be hidden
+        $(".username").hide();
+        $(".informationForm").show();
+        $(".previous").on('click', function () {
+            $(".username").toggle();
+            $(".informationForm").toggle();
+        })
+        // Hide let's start diet button
+        $(".diet").hide();
+        $('.calc').on('click', function () {
+            $(".diet").show();
+        })
+
+        // This selection will be hidden untill the calculation results is shown
+        $(".radioDiet").hide();
+        $(".diet").on('click', function () {
+            $(".radioDiet").toggle();
+        })
+    </script>
+
+
 </body>
+
 </html>
