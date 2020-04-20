@@ -127,13 +127,15 @@ function aboutUs(req, res) {
 app.get('*', (req, res) => {
     res.status(404).send('This route does not exist!!');
 })
-client.connect()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Listening on PORT ${PORT}`)
-    })
 
-  });
+app.listen(PORT, () => {
+  console.log(`Listening on PORT ${PORT}`)
+})
+
+// client.connect()
+//   .then(() => {
+  
+//   });
 
 
 
