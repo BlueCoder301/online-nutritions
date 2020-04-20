@@ -40,6 +40,7 @@ app.get('/meals' , getMeals);
 function getMeals(req,res){
   res.render('pages/meals');
 }
+app.get('/search',searchRout);
 
 function getIndex(req,res){
   res.render('pages/index');
@@ -95,6 +96,32 @@ function calculater(req,res){
 
 
     })
+}
+
+function searchRout(req,res){
+let keyWord = req.query.input;
+var options = {
+  method: 'GET',
+  url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/searchComplex',
+  qs: {
+    query: keyWord,
+    minProtein: '5',
+    maxProtein: '100',
+    limitLicense: 'false',
+    offset: '0',
+    number: '10'
+  },
+  headers: {
+    'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+    'x-rapidapi-key': 'de72feb0d1msh4cd6880191f064fp1248d3jsnb2c8b04da480'
+  }
+};
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+  searchResults = JSON.parse(body);;
+  res.render('pages/search', { food: searchResults });
+});
 }
 
 
