@@ -1,25 +1,25 @@
-@media (min-width : 1000px){
-
     body {
         scroll-behavior: smooth;
     }
-    main{
+
+    main {
         z-index: -1;
     }
-    img{
+
+    img {
         z-index: -1;
     }
+
     .about_div {
         background-color: #FEFEFE;
         display: flex;
     }
-    
+
     .header-div {
         width: 100%;
-        /* background-color: blue; */
         height: 380px;
     }
-    
+
     #a_header {
         text-decoration: none;
         color: black;
@@ -30,36 +30,36 @@
         padding-top: 12%;
         scroll-behavior: smooth;
     }
-    
+
     h1 {
         justify-content: center;
         text-align: center;
         padding-bottom: 3%;
         padding-top: 3%;
     }
-    
+
     .about_div2 {
         display: flex;
         width: 100%;
     }
-    
+
     .im2 {
         width: 25%;
     }
-    
+
     .names {
         font-size: larger;
     }
-    
+
     .hide {
         text-align: justify;
         padding-left: 9%;
     }
-    
+
     h5 {
         padding-left: 9%;
     }
-    
+
     .avatar {
         height: 150px;
         width: 50%;
@@ -67,11 +67,11 @@
         cursor: pointer;
         margin-left: 10%;
     }
-    
+
     .about-usP {
         width: 25%;
     }
-    
+
     .hvr-bounce-in {
         display: inline-block;
         vertical-align: middle;
@@ -81,14 +81,14 @@
         -webkit-transition-duration: .5s;
         transition-duration: .5s
     }
-    
+
     .hvr-bounce-in:active, .hvr-bounce-in:focus, .hvr-bounce-in:hover {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
         -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
         transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36)
     }
-    
+
     .hvr-underline-from-center {
         display: inline-block;
         vertical-align: middle;
@@ -100,11 +100,10 @@
         margin-top: -4%;
         color: gray;
     }
-    
+
     .hvr-underline-from-center:before {
         content: "";
         position: absolute;
-        z-index: -1;
         left: 50%;
         right: 50%;
         bottom: 0;
@@ -118,14 +117,12 @@
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out
     }
-    
+
     .hvr-underline-from-center:active:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:hover:before {
         left: 0;
         right: 0
     }
-    
-    /* Icon Hang */
-    
+
     @-webkit-keyframes hvr-icon-hang {
         0% {
             -webkit-transform: translateY(6px);
@@ -140,7 +137,7 @@
             transform: translateY(6px);
         }
     }
-    
+
     @keyframes hvr-icon-hang {
         0% {
             -webkit-transform: translateY(6px);
@@ -155,21 +152,21 @@
             transform: translateY(6px);
         }
     }
-    
+
     @-webkit-keyframes hvr-icon-hang-sink {
         100% {
             -webkit-transform: translateY(6px);
             transform: translateY(6px);
         }
     }
-    
+
     @keyframes hvr-icon-hang-sink {
         100% {
             -webkit-transform: translateY(6px);
             transform: translateY(6px);
         }
     }
-    
+
     .hvr-icon-hang {
         display: inline-block;
         vertical-align: middle;
@@ -179,12 +176,12 @@
         -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s;
     }
-    
+
     .hvr-icon-hang .hvr-icon {
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
-    
+
     .hvr-icon-hang:hover .hvr-icon, .hvr-icon-hang:focus .hvr-icon, .hvr-icon-hang:active .hvr-icon {
         -webkit-animation-name: hvr-icon-hang-sink, hvr-icon-hang;
         animation-name: hvr-icon-hang-sink, hvr-icon-hang;
@@ -201,9 +198,7 @@
         -webkit-animation-direction: normal, alternate;
         animation-direction: normal, alternate;
     }
-    
-    
-    
+
     #box-three p {
         margin: 0px;
         position: relative;
@@ -211,9 +206,7 @@
         transform: translate(0, -50%);
         text-align: center;
     }
-    
-    /* Button */
-    
+
     input[type="button"], input[type="submit"], input[type="reset"], button, .button {
         position: relative;
         display: inline-block;
@@ -233,32 +226,26 @@
         -ms-transition: background-color 0.35s ease-in-out;
         transition: background-color 0.35s ease-in-out;
     }
-    
+
     input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .button:hover {
         background-color: #9ececc;
     }
-    
+
     input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active, button:active, .button:active {
         background-color: #7eaeac;
     }
-    
-    ul {
-        display: flex;
-    }
-    
-    li {
+
+    /* li {
         display: flex;
         text-decoration: none;
         margin-left: 20%;
-    
-    }
-    
-    /* Icons */
-    
+    }   */
+
     .icons {
+        display: flex;
         text-decoration: none;
     }
-    
+
     .icon:before {
         display: inline-block;
         font-family: FontAwesome;
@@ -270,9 +257,13 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-    
+
     .icon>.label {
         display: none;
     }
-    
-}
+
+    .icons>li {
+        display: flex;
+        text-decoration: none;
+        margin-left: 20%;
+    }
