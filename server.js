@@ -1,9 +1,12 @@
 'use strict';
+const ejsLint = require('ejs-lint');
+
 let meals = {};
 let information = {};
 let searchResults = {};
 var calories;
 require('dotenv').config();
+
 const pg = require('pg');
 const express = require('express');
 const PORT = process.env.PORT || 3030;
@@ -28,6 +31,15 @@ app.get('/about-us', aboutUs);
 app.get('/' , getIndex);
 app.get('/info',showCalculater);
 app.post('/info',calculater);
+app.get('/meals' , getMeals);
+
+
+
+
+
+function getMeals(req,res){
+  res.render('pages/meals');
+}
 
 function getIndex(req,res){
   res.render('pages/index');
@@ -100,13 +112,13 @@ function aboutUs(req, res) {
 app.get('*', (req, res) => {
     res.status(404).send('This route does not exist!!');
 })
-client.connect()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Listening on PORT ${PORT}`)
-    })
-
-  });
-
+// client.connect()
+//   .then(() => {
+    
+//   });
+  
+  app.listen(PORT, () => {
+    console.log(`Listening on PORT ${PORT}`)
+  })
 
 

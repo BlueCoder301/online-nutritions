@@ -1,0 +1,30 @@
+/* main{
+    display: flex;
+} */
+.mealsDet{
+    display: flex;
+    padding: 20px;
+    margin-left: 20px;
+}
+.mealsDiv{
+    padding: 60px;
+    padding-top: 0px;
+
+}
+.choseDite{
+    text-align: center;
+    padding-left: 45%;
+    padding-top: 7%;
+    display: inline-grid;
+
+}
+#choseH4{
+    padding-top: 10%;
+}
+.redioDite{
+    /* display: block; */
+    width: 25px;
+    height: 16px;
+    margin-top: -11%;
+    -webkit-transform: translate(0%, 0%);
+}
