@@ -1,8 +1,45 @@
-body{
-    margin: auto;
-    background-image: image('./public/img');
+img#logo {
+  float: left;
+  margin-left: 4%;
 }
 
+
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header ul {
+  text-align: center;
+}
+
+.header ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.header ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 25px;
+  transition: all ease 0.5s;
+}
+
+.header ul li a:hover {
+  background-color: #67568f85;
+}
+/* ---------------------------------calculation form------------------------------ */
+body{
+  height:100%;
+  width: 100%;
+}
 legend {
 text-align: left;
 font-weight: bold;
@@ -14,15 +51,23 @@ font-size: large;
  fieldset{
    color: #c96e77;
    border-radius: 5px;
-   width:500px;
-   height:600px;
+   width:450px;
+   height:500px;
    border: solid 1pt #f7c0c6;
    box-sizing: border-box;
    box-shadow: 0px 4px 3px rgba(255, 255, 255, 0.054),
    0px 8px 13px rgba(255, 255, 255, 0.054),
    0px 18px 15px rgba(255, 255, 255, 0.1);
+   /* margin-left: 100px; */
+   /* margin-top: 50px; */
  }
- 
+ /* #inf{
+   float: left;
+ } */
+ #login{
+  width:350px;
+  height:300px;
+ }
  input[type=text], select {
    /* width: 100%; */
    width: 200px;
@@ -34,14 +79,14 @@ font-size: large;
    box-sizing: border-box;
    border-radius: 5px;
    font-family: 'Rajdhani', sans-serif;
-   margin-bottom: 40px;
+   margin-bottom: 10px;
  }
  #username{
-    margin-top: 50px;
+    margin-top: 30px;
  }
  input[type=submit] {
    /* width: 100%; */
-   width: 400px;
+   width: 300px;
    background-color: #EE99A3;
    color: white;
    padding: 14px 20px;
@@ -51,6 +96,9 @@ font-size: large;
    cursor: pointer;
    font-size: larger;
    font-family: 'Rajdhani', sans-serif;
+ }
+ .calc{
+   width: 200;
  }
  .gender{
    /* position: absolute; */
@@ -66,9 +114,122 @@ font-size: large;
  input[type=submit]:hover {
    background-color: wheat;
  }
- label{
+ .labeles{
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold; 
    margin-left:20px;
    
  }
+ .res{
+  box-sizing: border-box;
+  border-radius: 5px;
+   padding: 50px;
+   float: left;
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: row;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    /* background-image:image('.'); */
+}
+
+/*-------------- footer section ---------------*/
+
+.footer {
+  background-color: rgba(51, 42, 42, 0.13);
+  columns: white;
+  height: 70vh;
+  position: relative;
+}
+
+.footer .footer-content {
+  height: 250px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section1 {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer .footer-bottom {
+  background-color: rgba(94, 91, 91, 0.973);
+  color: white;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+  letter-spacing: 4px;
+}
+
+.footer .footer-content h1, .footer .footer-content h2 {
+  color: rgb(87, 82, 86);
+}
+
+.footer .footer-content .about h1 span {
+  color: rgb(139, 41, 139);
+}
+
+.footer .footer-content .about p {
+  margin-bottom: 10px;
+  margin-top: 17px;
+}
+
+.footer .footer-content .about .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.footer .footer-content .about .social a {
+  border: 1px solid grey;
+  width: 49px;
+  height: 38px;
+  padding-top: 11px;
+  margin-right: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  border-radius: 28px;
+}
+
+.footer .footer-content .about .social a:hover {
+  border: 1px solid rgb(139, 41, 139);
+  columns: white;
+  transition: all .3s;
+}
+
+.footer .footer-section1 map iframe{
+  border: 2px solid black;
+}
+.social {
+  margin-top: 19px;
+  margin-left: 56px;
+}
+
+.footer .footer-content .contact-form h2 {
+  float: right;
+  margin-right: 59px;
+  margin-top: 7px;
+} 
+
+.footer .footer-content .contact-form .apps a .img1 {
+  width: 200px;
+  height: 70px;
+  float: right;
+  margin-right: 84px;
+  margin-top: 30px;
+}
+
+.footer .footer-content .contact-form .apps a .img2 {
+  width: 226px;
+  height: 97px;
+  margin-left: 102px;
+}
+
