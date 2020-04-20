@@ -19,24 +19,24 @@
         
         <form action="/result" class="informationForm" method="GET">
             <fieldset id="">
-                <legend> Body Mass Index </legend>
+                <legend class="bodyy"> Body Mass Index </legend>
                 <div>
                     <label class="labeles" for="username">User name :</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your user name" required>
+                    <input type="text" class="user" id="username" name="username" placeholder="Enter your user name" required>
                 </div>
                 <br>
                 <div>
                     <label class="labeles" for="weight">Weight :</label>
-                    <input type="text" id="weight" name="weight" placeholder="Your weight in Kg ex:65" required>
+                    <input type="text" class="user1" id="weight" name="weight" placeholder="Your weight in Kg ex:65" required>
                 </div>
                 <br>
                 <div>
                     <label class="labeles" for="height"> Height :</label>
-                    <input type="text" id="height" name="height" placeholder="Your height in cm ex:165" required>
+                    <input type="text" class="user2" id="height" name="height" placeholder="Your height in cm ex:165" required>
                 </div>
                 <br>
                 <label class="labeles" for="age"> Age :</label>
-                <input type="text" id="age" name="age" placeholder="Your age ex:20" required>
+                <input type="text" class="user3" id="age" name="age" placeholder="Your age ex:20" required>
                 <br>
                 
                 <label class="labeles" for="gender"> Gender :</label>
@@ -56,10 +56,11 @@
             
                 <form action="/result" method="POST" class="username">
                     <fieldset id='login'>
-                    <label for="user">User name :</label>
-                    <input type="text" name="previousUsername" id="user" placeholder="Enter your user name" required>
+                        <legend class="log-in"> Log in </legend>
+                    <label for="user" class="user4">User name :</label>
+                    <input type="text" class="user5" name="previousUsername" id="user" placeholder="Enter your user name" required>
                     <br>
-                    <input type="submit" value="Get my information"></fieldset>
+                    <input type="submit" class="user6" value="Get my information"></fieldset>
                 </form>
                 <% if(locals.elsee) { %>
                     <p>the user name is not exist</p>
