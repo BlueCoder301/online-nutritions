@@ -148,7 +148,7 @@ img#logo {
 
 
 
-input {
+ input.input {
     box-sizing: border-box;
     width: 50px;
     height: 50px;
@@ -188,7 +188,7 @@ input {
     transform: translate(-100%, -50%);
 }
 
-.search:before {
+/* button.search:before {
     content: "";
     position: absolute;
     width: 20px;
@@ -259,7 +259,7 @@ input {
     -webkit-transform: translate(-100%, -50%);
     -ms-transform: translate(-100%, -50%);
     transform: translate(-100%, -50%);
-}
+} */
 
 /*-------------------- section-two --------------------*/
 
@@ -293,26 +293,24 @@ input {
     color: rgb(100, 65, 65);
 }
 
-button.button.button1{
-width: 176px;
-height: 55px;
-margin: 25px 0px 0px 95px;
-border: none;
-background: #c76ea7;
-color: white;
-cursor: pointer;
-font-size: larger;
-font-family: unset;
-font-weight: 600;
-letter-spacing: 1px;
-border-radius: 4%;
+.calculator:hover{
+    background-color: wheat;
 }
 
-.button1:hover  {
-    color:#ebb0d5;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  }
-
+.calculator {
+  /* width: 100%; */
+  width: 203px;
+  background-color: #EE99A3;
+  color: white;
+  padding: 14px 20px;
+  margin-left: 20%;
+  margin-top: 11%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: larger;
+  font-family: 'Rajdhani', sans-serif;
+}
 
 
 .video-section {
