@@ -5,97 +5,74 @@
 <%- include('../layout/head') %>
 
 
-<body>
+<body id="page">
     <%- include('../layout/header') %>
     <!---------------------------------------DATABASE INFORMATION----------------------------->
-    <main>
+    <main id="resMain">
+        <section class="container1">
 
 
         <% if (locals.DB) { %>
         <% var x=''; %>
         <% if(DB.gender == 'm')  x = 'Male'; %>
         <% if(DB.gender == 'f')  x = 'Female'; %>
-        <h4>Your username: <%= DB.user_name%></h4>
-        <h4>your weight: <%= DB.weight%></h4>
-        <h4>Your height: <%= DB.height%></h4>
-        <h4>Your age: <%= DB.age%></h4>
-        <h4>Your gender: <%= x %></h4>
+
+        <p class="prevInf">Your username: <%= DB.user_name%></p>
+
+        <p class="prevInf">your weight: <%= DB.weight%></p>
+
+        <p class="prevInf">Your height: <%= DB.height%></p>
+
+        <p class="prevInf">Your age: <%= DB.age%></p>
+
+        <p class="prevInf">Your gender: <%= x %></p>
+
         <% } %>
+    </section>
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
 
 
         <!---------------------------------------Calculation INFORMATION-------------------------------->
 
+        <section class="container">
         <% if(locals.info){ %>
-        <div>
+
+        <div class="results">
             <fieldset class="res">
-                <legend>Status:</legend>
+                <legend class="data">Status:</legend>
                 <h2><%= info.bmi.status%></h2>
             </fieldset>
         </div>
         <div>
-            <div>
+            <div class="results">
                 <fieldset class="res">
-                    <legend>Ideal Weight:</legend>
+                    <legend class="data">Ideal Weight:</legend>
                     <h2><%= info.ideal_weight%></h2>
                 </fieldset>
-            </div>
+
+            </div class="results">
             <fieldset class="res">
-                <legend>Risk:</legend>
+                <legend class="data">Risk:</legend>
                 <h2><%= info.bmi.risk%></h2>
             </fieldset>
         </div>
-        <div>
+
+        <div class="results">
             <fieldset class="res">
-                <legend>BMR:</legend>
+                <legend class="data">BMR:</legend>
                 <h2> <%= info.bmr.value%></h2>
             </fieldset>
         </div>
         <% } %>
-
+</section>
         <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
 
 
         <form class="radioDiet" action="/diet" method="get">
-            <label> Choose the type of diet</label><br>
-            <label>
-                <span>Keto</span>
-                <input type="radio" name="diet" value="keto" required>
-            </label>
-            <br>
-            <label>
-                <span>Paleo</span>
-                <input type="radio" name="diet" value="paleo" required>
-            </label><br>
-            <label>
-                <span>Vegetarian</span>
-                <input type="radio" name="diet" value="vegetarian" required>
-            </label>
-            <br>
-            <label>
-                <span>Vegan</span>
-                <input type="radio" name="diet" value="vegan" required>
-            </label><br>
-            <label>
-                <span>Mediterranean</span>
-                <input type="radio" name="diet" value="mediterranean" required>
-            </label>
-            <br>
-            <label>
-                <span>Raw</span>
-                <input type="radio" name="diet" value="raw" required>
-            </label><br>
-            <label>
-                <span>Low Carb</span>
-                <input type="radio" name="diet" value="low_carb" required>
-            </label>
-            <br>
-            <label>
-                <span>No Sugar</span>
-                <input type="radio" name="diet" value="no_sugar" required>
-            </label><br>
-            <input type="submit" value="Lets start your diet">
+           
+            <input class="diet" type="submit" value="Lets start your diet">
+
         </form>
     </main>
     <%- include('../layout/footer') %>
