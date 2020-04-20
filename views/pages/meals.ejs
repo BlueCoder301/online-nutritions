@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/meals.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <%- include('../layout/head') %>
+    <title>Meals</title>
+</head>
+
+<body>
+    <%- include('../layout/header') %>
+    <main>
+        <div class="choseDite">
+            <h4 id="choseH4">Plaese Choese Your Dite:</h4><br>
+            <label class="labalDite" for="">Vegan</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+            <label class="labalDite" for="">Atkins</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+            <label class="labalDite" for="">The Zone</label> <input class="redioDite" type="radio" name="Vegan"
+                id=""><br>
+            <label class="labalDite" for="">Ketogenic</label> <input class="redioDite" type="radio" name="Vegan"
+                id=""><br>
+            <label class="labalDite" for="">Vegetarian</label> <input class="redioDite" type="radio" name="Vegan"
+                id=""><br>
+            <button type="submit" id="submit" class="btnPush hvr-pulse-shrink">Submit </button>
+        </div>
+        <section id="show">
+            <section class="mealsDet">
+                <div data-aos="zoom-in" class="mealsDiv">
+                    <img src="/img/ddd.png" alt="" srcset="">
+                    <h3>Tilte : </h3>
+                    <h3>Ready in minits : </h3>
+                </div>
+
+                <div data-aos="zoom-in" class="mealsDiv">
+                    <img src="/img/ddd.png" alt="" srcset="">
+                    <h3>Tilte : </h3>
+                    <h3>Ready in minits : </h3>
+                </div>
+                <div data-aos="zoom-in" class="mealsDiv">
+                    <img src="/img/ddd.png" alt="" srcset="">
+                    <h3>Tilte : </h3>
+                    <h3>Ready in minits : </h3>
+                </div>
+            </section>
+            <section>
+
+                <table class="nutrients" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <tr>
+                        <th class="headtable">Calories</th>
+                        <th class="headtable">Protein</th>
+                        <th class="headtable">Fat</th>
+                        <th class="headtable">Carbohydrates</th>
+                    </tr>
+                    <tr>
+                        <td class="dataTable">1988</td>
+                        <td class="dataTable">55.64</td>
+                        <td class="dataTable">121.19</td>
+                        <td class="dataTable">177.96</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+
+
+
+
+
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#show').hide();
+            $('#submit').on('click', function () {
+                $('#show').fadeIn();
+            })
+        })
+
+    </script>
+    <%- include('../layout/footer') %>
+</body>
+
+</html>

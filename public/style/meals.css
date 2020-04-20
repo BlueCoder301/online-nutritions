@@ -1,0 +1,173 @@
+/* main{
+    display: flex;
+} */
+
+.mealsDet {
+    display: flex;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.mealsDiv {
+    padding: 60px;
+    padding-top: 0px;
+    z-index: -1;
+}
+
+.choseDite {
+    text-align: center;
+    padding-left: 45%;
+    padding-top: 7%;
+    display: inline-grid;
+}
+
+#choseH4 {
+    padding-top: 10%;
+}
+
+.redioDite {
+    /* z-index: -1; */
+    /* display: block; */
+    width: 25px;
+    height: 16px;
+    margin-top: -11%;
+    -webkit-transform: translate(0%, 0%);
+}
+
+.nutrients {
+    display: inline-grid;
+    width: 50%;
+    height: 200px;
+    margin-left: 37%;
+}
+
+/* .headtable {
+    text-align: center;
+    padding-left: 14%;
+    padding-bottom: 3%;
+}
+.dataTable {
+    padding-left: 15%;
+    text-align: center;
+} */
+
+table {
+    width: 750px;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    table {
+        width: 100%;
+    }
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+        color: #000;
+        font-weight: bold;
+    }
+}
+
+button {
+    /* z-index: -1; */
+    width: 100%;
+    height: 168%;
+    border: none;
+    background-color: #EFA93D;
+    cursor: pointer;
+}
+
+button:hover {
+    border-radius: 50px;
+}
+
+/* Pulse Shrink */
+
+@-webkit-keyframes hvr-pulse-shrink {
+    to {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes hvr-pulse-shrink {
+    to {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+.hvr-pulse-shrink {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+    -webkit-animation-name: hvr-pulse-shrink;
+    animation-name: hvr-pulse-shrink;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
