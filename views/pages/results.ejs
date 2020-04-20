@@ -1,9 +1,17 @@
-<%- include('../layout/head') %> 
-<%- include('../layout/header') %> 
-<!---------------------------------------DATABASE INFORMATION----------------------------->
+<!DOCTYPE html>
+<html lang="en">
 
-</form>
-    <% if (locals.DB) { %>
+
+<%- include('../layout/head') %>
+
+
+<body>
+    <%- include('../layout/header') %>
+    <!---------------------------------------DATABASE INFORMATION----------------------------->
+    <main>
+
+
+        <% if (locals.DB) { %>
         <% var x=''; %>
         <% if(DB.gender == 'm')  x = 'Male'; %>
         <% if(DB.gender == 'f')  x = 'Female'; %>
@@ -12,77 +20,85 @@
         <h4>Your height: <%= DB.height%></h4>
         <h4>Your age: <%= DB.age%></h4>
         <h4>Your gender: <%= x %></h4>
-       <% } %>
-<!-------------------------------------END OF DATABASE INFORMATION---------------------------->
+        <% } %>
+        <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
 
 
-<!---------------------------------------Calculation INFORMATION-------------------------------->
+        <!---------------------------------------Calculation INFORMATION-------------------------------->
 
-<% if(locals.info){ %>
-    <div>
-        <fieldset class="res"><legend>Status:</legend>
-    <h2><%= info.bmi.status%></h2>
-  </fieldset>
-  </div>
-  <div>
-      <div>
-          <fieldset class="res"> <legend>Ideal Weight:</legend> 
-      <h2><%= info.ideal_weight%></h2>
-      </fieldset>
-      </div>
-  <fieldset class="res"> <legend>Risk:</legend>
-  <h2><%= info.bmi.risk%></h2>
-  </fieldset>
-  </div>
-  <div>
-      <fieldset  class="res"> <legend>BMR:</legend>
-  <h2> <%= info.bmr.value%></h2>
-  </fieldset>
-  </div>
-  <% } %>
-  
-  <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
+        <% if(locals.info){ %>
+        <div>
+            <fieldset class="res">
+                <legend>Status:</legend>
+                <h2><%= info.bmi.status%></h2>
+            </fieldset>
+        </div>
+        <div>
+            <div>
+                <fieldset class="res">
+                    <legend>Ideal Weight:</legend>
+                    <h2><%= info.ideal_weight%></h2>
+                </fieldset>
+            </div>
+            <fieldset class="res">
+                <legend>Risk:</legend>
+                <h2><%= info.bmi.risk%></h2>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset class="res">
+                <legend>BMR:</legend>
+                <h2> <%= info.bmr.value%></h2>
+            </fieldset>
+        </div>
+        <% } %>
+
+        <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
 
 
-<form class="radioDiet" action="/diet" method="get">
-    <label> Choose the type of diet</label><br>
-    <label>
-        <span>Keto</span>
-        <input type="radio" name="diet" value="keto" required>
-    </label>
-    <br>
-    <label>
-        <span>Paleo</span>
-        <input type="radio" name="diet" value="paleo" required>
-    </label><br>
-    <label>
-        <span>Vegetarian</span>
-        <input type="radio" name="diet" value="vegetarian" required>
-    </label>
-    <br>
-    <label>
-        <span>Vegan</span>
-        <input type="radio" name="diet" value="vegan" required>
-    </label><br>
-    <label>
-        <span>Mediterranean</span>
-        <input type="radio" name="diet" value="mediterranean" required>
-    </label>
-    <br>
-    <label>
-        <span>Raw</span>
-        <input type="radio" name="diet" value="raw" required>
-    </label><br>
-    <label>
-        <span>Low Carb</span>
-        <input type="radio" name="diet" value="low_carb" required>
-    </label>
-    <br>
-    <label>
-        <span>No Sugar</span>
-        <input type="radio" name="diet" value="no_sugar" required>
-    </label><br>
-    <input type="submit" value="Lets start your diet">
-</form>
-<%- include('../layout/footer') %> 
+        <form class="radioDiet" action="/diet" method="get">
+            <label> Choose the type of diet</label><br>
+            <label>
+                <span>Keto</span>
+                <input type="radio" name="diet" value="keto" required>
+            </label>
+            <br>
+            <label>
+                <span>Paleo</span>
+                <input type="radio" name="diet" value="paleo" required>
+            </label><br>
+            <label>
+                <span>Vegetarian</span>
+                <input type="radio" name="diet" value="vegetarian" required>
+            </label>
+            <br>
+            <label>
+                <span>Vegan</span>
+                <input type="radio" name="diet" value="vegan" required>
+            </label><br>
+            <label>
+                <span>Mediterranean</span>
+                <input type="radio" name="diet" value="mediterranean" required>
+            </label>
+            <br>
+            <label>
+                <span>Raw</span>
+                <input type="radio" name="diet" value="raw" required>
+            </label><br>
+            <label>
+                <span>Low Carb</span>
+                <input type="radio" name="diet" value="low_carb" required>
+            </label>
+            <br>
+            <label>
+                <span>No Sugar</span>
+                <input type="radio" name="diet" value="no_sugar" required>
+            </label><br>
+            <input type="submit" value="Lets start your diet">
+        </form>
+    </main>
+    <%- include('../layout/footer') %>
+</body>
+
+</html>

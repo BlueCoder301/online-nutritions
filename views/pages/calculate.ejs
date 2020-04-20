@@ -17,7 +17,7 @@
 <!--------------------------------------BMI INFORMATION----------------------------------------->
         
         
-        <form action="/info" class="informationForm" method="POST">
+        <form action="/result" class="informationForm" method="GET">
             <fieldset id="">
                 <legend> Body Mass Index </legend>
                 <div>
@@ -54,13 +54,16 @@
             
 <!--------------------------------------USER INFORMATION---------------------------------------->
             
-                <form action="/" method="post" class="username">
+                <form action="/result" method="POST" class="username">
                     <fieldset id='login'>
                     <label for="user">User name :</label>
                     <input type="text" name="previousUsername" id="user" placeholder="Enter your user name" required>
                     <br>
                     <input type="submit" value="Get my information"></fieldset>
                 </form>
+                <% if(locals.elsee) { %>
+                    <p>the user name is not exist</p>
+                    <% } %>
 <!-------------------------------------------END OF USER INFORMATION---------------------------->
 
 
