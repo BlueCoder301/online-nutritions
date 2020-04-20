@@ -1,3 +1,5 @@
+
+
 const input = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
@@ -8,6 +10,3 @@ const expand = () => {
 
 searchBtn.addEventListener("click", expand);
 
-$(function(){
-    new WOW().init(); 
-  });
