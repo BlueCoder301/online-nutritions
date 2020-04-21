@@ -15,54 +15,42 @@
     <%- include('../layout/header') %>
     <main>
         <div class="choseDite">
+            <form action="/meals" method="POST">
             <h4 id="choseH4">Plaese Choese Your Dite:</h4><br>
-            <label class="labalDite" for="">Vegan</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
-            <label class="labalDite" for="">Atkins</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
-            <label class="labalDite" for="">The Zone</label> <input class="redioDite" type="radio" name="Vegan"
-                id=""><br>
-            <label class="labalDite" for="">Ketogenic</label> <input class="redioDite" type="radio" name="Vegan"
-                id=""><br>
+            <label class="labalDite" for="">Keto</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+            <label class="labalDite" for="">Paleo</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
             <label class="labalDite" for="">Vegetarian</label> <input class="redioDite" type="radio" name="Vegan"
                 id=""><br>
+            <label class="labalDite" for="">Vegan</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+            <label class="labalDite" for="">Mediterranean</label> <input class="redioDite" type="radio" name="Vegan"
+                id=""><br>
             <button type="submit" id="submit" class="btnPush hvr-pulse-shrink">Submit </button>
+        </form>
         </div>
+        <% if(locals.meal1) { %>
+         
         <section id="show">
             <section class="mealsDet">
                 <div data-aos="zoom-in" class="mealsDiv">
-                    <img src="/img/ddd.png" alt="" srcset="">
-                    <h3>Tilte : </h3>
-                    <h3>Ready in minits : </h3>
+                    <img src="<%= meal1[0].image %>" >
+                    <h3>Tilte : <%= meal1[0].title %></h3>
+                    <h3>Calories : <%= meal1[0].calories %> </h3>
                 </div>
 
                 <div data-aos="zoom-in" class="mealsDiv">
-                    <img src="/img/ddd.png" alt="" srcset="">
-                    <h3>Tilte : </h3>
-                    <h3>Ready in minits : </h3>
+                    <img src="<%= meal1[1].image %>" >
+                    <h3>Tilte : <%= meal1[1].title %></h3>
+                    <h3>Calories : <%= meal1[1].calories %> </h3>
                 </div>
                 <div data-aos="zoom-in" class="mealsDiv">
-                    <img src="/img/ddd.png" alt="" srcset="">
-                    <h3>Tilte : </h3>
-                    <h3>Ready in minits : </h3>
+                    <img src="<%= meal1[2].image %>" >
+                    <h3>Tilte : <%= meal1[2].title %></h3>
+                    <h3>Calories : <%= meal1[2].calories %> </h3>
                 </div>
             </section>
-            <section>
-
-                <table class="nutrients" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                    <tr>
-                        <th class="headtable">Calories</th>
-                        <th class="headtable">Protein</th>
-                        <th class="headtable">Fat</th>
-                        <th class="headtable">Carbohydrates</th>
-                    </tr>
-                    <tr>
-                        <td class="dataTable">1988</td>
-                        <td class="dataTable">55.64</td>
-                        <td class="dataTable">121.19</td>
-                        <td class="dataTable">177.96</td>
-                    </tr>
-                </table>
-            </section>
+            
         </section>
+        <% } %>
 
 
 
@@ -75,7 +63,7 @@
     <script>
         AOS.init();
     </script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $('#show').hide();
             $('#submit').on('click', function () {
@@ -83,7 +71,7 @@
             })
         })
 
-    </script>
+    </script> -->
     <%- include('../layout/footer') %>
 </body>
 

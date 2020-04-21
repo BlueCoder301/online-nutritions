@@ -9,7 +9,7 @@
     <%- include('../layout/header') %>
     <!---------------------------------------DATABASE INFORMATION----------------------------->
     <main id="resMain">
-        <section class="container1">
+       <center> <section class="container1">
 
 
         <% if (locals.DB) { %>
@@ -28,7 +28,7 @@
         <p class="prevInf">Your gender: <%= x %></p>
 
         <% } %>
-    </section>
+    </section></center>
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
 
@@ -69,7 +69,7 @@
         <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
 
 
-        <form class="radioDiet" action="/diet" method="get">
+        <form class="radioDiet" action="/diet" method="POST">
            
             <input class="diet" type="submit" value="Lets start your diet">
 
