@@ -25,15 +25,32 @@
     padding-top: 10%;
 }
 
+.labalDite {
+    display: flex;
+    flex-direction: row;
+}
+
+.float-left {
+    float: left;
+}
+
+button#submit {
+    margin-top: 20%;
+    margin-bottom: 18%;
+}
+
+.float-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -103%;
+}
+
 .redioDite {
-    /* z-index: -1; */
-    /* display: block; */
     width: 25px;
+    float: right;
     height: 16px;
-    margin-top: -11%;
-    margin: 15px;
     text-align: center;
-    /* -webkit-transform: translate(0%, 0%); */
 }
 
 .nutrients {
@@ -42,6 +59,7 @@
     height: 200px;
     margin-left: 37%;
 }
+
 
 /* .headtable {
     text-align: center;
@@ -59,6 +77,7 @@ table {
     margin: 50px auto;
 }
 
+
 /* Zebra striping */
 
 tr:nth-of-type(odd) {
@@ -71,12 +90,14 @@ th {
     font-weight: bold;
 }
 
-td, th {
+td,
+th {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
     font-size: 18px;
 }
+
 
 /* 
 Max width before this PARTICULAR table gets nasty
@@ -84,12 +105,18 @@ This query will take effect for any screen smaller than 760px
 and also iPads specifically.
 */
 
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
     table {
         width: 100%;
     }
     /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
     }
     /* Hide table headers (but not display: none;, for accessibility) */
@@ -129,13 +156,14 @@ button {
     width: 100%;
     height: 30px;
     border: none;
-    background-color: #EFA93D;
+    background-color: #97434d;
     cursor: pointer;
 }
 
 button:hover {
     border-radius: 50px;
 }
+
 
 /* Pulse Shrink */
 
@@ -161,7 +189,7 @@ button:hover {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+.hvr-pulse-shrink:hover {
     -webkit-animation-name: hvr-pulse-shrink;
     animation-name: hvr-pulse-shrink;
     -webkit-animation-duration: 0.3s;
@@ -172,4 +200,128 @@ button:hover {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+}
+
+
+/*-------------- meals ----------------*/
+
+.meals-section2 {
+    height: 100vh;
+    background-color: rgb(243, 237, 237);
+}
+
+.second-meal2 .food2 {
+    position: absolute !important;
+    left: 32%;
+    margin: -197px 0 0 -310px;
+}
+
+.second-meal2 .food2 {
+    position: relative;
+    top: 336%;
+    width: 442px;
+    height: 394px;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .5);
+}
+
+.first-meal2 .food2 {
+    position: absolute !important;
+    margin: -197px 0 0 -310px;
+}
+
+.first-meal2 .food2 {
+    top: 336%;
+    right: 9%;
+    width: 442px;
+    height: 394px;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .5);
+}
+
+.food2>.cover2 {
+    position: relative;
+    height: 260px;
+    background-size: 100% auto;
+    border-radius: 2px 2px 0 0;
+    background-repeat: no-repeat;
+}
+
+.food2>.cover2>label {
+    position: absolute;
+    top: 22px;
+    left: -33px;
+    height: 33px;
+    padding: 0 30px 0 63px;
+    line-height: 33px;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFF;
+    background: #d46eb0;
+    opacity: 0.7;
+}
+
+p.examples {
+    font-size: 23px;
+    font-family: monospace;
+    text-align: center;
+    position: absolute;
+    top: 286%;
+    left: 19%;
+    /* margin-top: 4px; */
+}
+
+.food2>.cover2>label>i {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.food2>.info2 {
+    position: relative;
+    height: 134px;
+    overflow: hidden;
+    border-radius: 0 0 2px 2px;
+}
+
+.food2>.info2>.content2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 154px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #1b1919;
+}
+
+.food2>.info2>.recipe2 {
+    display: block;
+    position: absolute;
+    width: 134px;
+    height: 134px;
+    background: #d46eb0;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0 0 0 2px;
+}
+
+.food2>.info2>.recipe2:hover {
+    background: #e7a1cf;
+}
+
+.food2>.info2>.recipe2>i {
+    display: block;
+    margin: 38px 0 15px;
 }
