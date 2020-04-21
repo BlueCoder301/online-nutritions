@@ -26,19 +26,31 @@
 }
 
 .labalDite {
+    display: flex;
+    flex-direction: row;
+}
+
+.float-left {
     float: left;
 }
 
+button#submit {
+    margin-top: 20%;
+    margin-bottom: 18%;
+}
+
+.float-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -103%;
+}
+
 .redioDite {
-    /* z-index: -1; */
-    /* display: block; */
     width: 25px;
     float: right;
     height: 16px;
-    margin-top: -11%;
-    margin: 15px;
     text-align: center;
-    /* -webkit-transform: translate(0%, 0%); */
 }
 
 .nutrients {
@@ -188,4 +200,118 @@ button:hover {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+}
+
+
+/*-------------- meals ----------------*/
+
+.meals-section2 {
+    height: 100vh;
+    background-color: rgb(243, 237, 237);
+}
+
+.second-meal2 .food {
+    position: absolute !important;
+    left: 32%;
+    margin: -197px 0 0 -310px;
+}
+
+.second-meal2 .food {
+    position: relative;
+    top: 250%;
+    width: 442px;
+    height: 394px;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .5);
+}
+
+.first-meal2 .food2 {
+    position: absolute !important;
+    margin: -197px 0 0 -310px;
+}
+
+.first-meal2 .food2 {
+    top: 250%;
+    right: 9%;
+    width: 442px;
+    height: 394px;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .5);
+}
+
+.food2>.cover2 {
+    position: relative;
+    height: 260px;
+    background-size: 29% auto;
+    border-radius: 2px 2px 0 0;
+    background-repeat: no-repeat;
+}
+
+.food2>.cover2>label {
+    position: absolute;
+    top: 22px;
+    left: -33px;
+    height: 33px;
+    padding: 0 30px 0 63px;
+    line-height: 33px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #FFF;
+    background: #d46eb0;
+    opacity: 0.7;
+}
+
+.food2>.cover2>label>i {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.food2>.info {
+    position: relative;
+    height: 134px;
+    overflow: hidden;
+    border-radius: 0 0 2px 2px;
+}
+
+.wrapper2 {
+    width: 100%;
+}
+
+.food2>.info2>.content2 {
+    /* position: absolute; */
+    top: 20px;
+    margin-left: 10%;
+    right: 20px;
+    bottom: 20px;
+    left: 154px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #888;
+}
+
+.food2>.info2>.recipe2 {
+    display: block;
+    position: absolute;
+    width: 134px;
+    height: 134px;
+    background: #d46eb0;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0 0 0 2px;
+}
+
+.food2>.info2>.recipe2:hover {
+    background: #e7a1cf;
+}
+
+.food2>.info2>.recipe2>i {
+    display: block;
+    margin: 38px 0 15px;
 }
