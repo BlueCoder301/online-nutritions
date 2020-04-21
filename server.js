@@ -100,7 +100,8 @@ function calculater(req, res) {
           res.render('pages/results', { info: information });
         });
       } else {
-        console.log('the user name already exist');
+        
+        res.render('pages/calculate', { msg: 'This user name is already exist' });
       }
 
 
