@@ -18,33 +18,37 @@
             <% var x=''; %>
             <% if(DB.gender == 'm')  x = 'Male'; %>
             <% if(DB.gender == 'f')  x = 'Female'; %>
+            <form action="/update/<%= DB.user_name %>?_method=put" method="POST">
+                <p class="prevInf">Your username:<span> <%= DB.user_name%></span></p>
 
-            <p class="prevInf">Your username: <%= DB.user_name%><input type="text" class="updateForm" value="<%= DB.user_name%>"> </p>
+                <p class="prevInf">your weight: <span class="spann"> <%= DB.weight%></span><input type="text"
+                        name="weight" class="updateForm" value="<%= DB.weight%>" style="width: 30px;"></p>
 
-            <p class="prevInf">your weight: <%= DB.weight%><input type="text" class="updateForm" value="<%= DB.weight%>"></p>
-            
 
-            <p class="prevInf">Your height: <%= DB.height%> <input type="text" class="updateForm" value="<%= DB.height%>"></p>
-           
+                <p class="prevInf">Your height: <span class="spann"> <%= DB.height%></span> <input type="text"
+                        name="height" class="updateForm" value="<%= DB.height%>" style="width: 30px;"></p>
 
-            <p class="prevInf">Your age: <%= DB.age%><input type="text" class="updateForm" value="<%= DB.age%>"></p>
-            
 
-            <p class="prevInf" >Your gender: <%= x %><input type="text" class="updateForm" value=" <%= x %>"></p>
-            
-        
-        
+                <p class="prevInf">Your age: <span class="spann"> <%= DB.age%></span><input type="text" name="age"
+                        class="updateForm" value="<%= DB.age%>" style="width: 30px;"></p>
 
-            
-            
-            <form action="" >
-                <input class="asidbtn" type="submit" value="Update">
 
-                <input class="asidbtn" type="submit" value="Delete">
+                <p class="prevInf">Your gender: <%= x %></p>
 
-                <!-- -------upadate forms---- -->
+                <center><input type="submit" value="Save" class="updateForm" id="saveB"></center>
 
-                
+            </form>
+
+
+
+
+
+
+
+            <center><input class="asidbtn" type="submit" value="UPDATE"></center>
+            <!-- -------upadate forms---- -->
+
+
             <% } %>
         </aside>
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
@@ -86,15 +90,15 @@
             </div>
             <% } %>
 
-      <!------------------------------------END OF Calculation INFORMATION------------------------------------------>
+            <!------------------------------------END OF Calculation INFORMATION------------------------------------------>
 
 
         </section>
-     
+
 
 
         <form class="radioDiet" action="/diet" method="POST">
-           
+
 
             <input class="diet" type="submit" value="Lets start your diet">
 
@@ -102,12 +106,15 @@
     </main>
     <%- include('../layout/footer') %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-       <script>   
-        $(document).ready(function () {  
-                $('.updateForm').hide();   
-            $('.asidbtn').on('click', function () {        
-                   $('.updateForm').toggle();  
-         })   })</script>
+    <script>
+        $(document).ready(function () {
+            $('.updateForm').hide();
+            $('.spann').show();
+            $('.asidbtn').on('click', function () {
+                $('.updateForm').toggle();
+                $('.spann').toggle();
+            })
+        })</script>
 </body>
 
 </html>
