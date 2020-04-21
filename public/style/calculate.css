@@ -67,7 +67,7 @@ form.username {
   width: 200px;
   padding: 12px 29px;
   margin-left: 66px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -190,7 +190,7 @@ font-size: large;
   margin-bottom: 10px;
 }
  #username{
-    margin-top: 30px;
+    margin-top: 40px;
  }
  .calc {
    /* width: 100%; */
@@ -229,19 +229,16 @@ font-size: large;
    margin-left:20px;
    
  }
- .res{
-  box-sizing: border-box;
-  border-radius: 5px;
-   padding: 50px;
+ 
+.fa {
+  width: 60px;
+  height: 50px; 
    float: left;
-  display: flex;
-  flex-wrap: wrap;
-    flex-direction: row;
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-    /* background-image:image('.'); */
-}
+  margin-left: 180px;
+  font-size: 3.3em;
+ 
+} 
+
 
 /*-------------- footer section ---------------*/
 
