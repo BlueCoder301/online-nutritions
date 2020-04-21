@@ -17,7 +17,7 @@
 .choseDite {
     text-align: center;
     padding-left: 45%;
-    padding-top: 7%;
+    padding-top: 2%;
     display: inline-grid;
 }
 
@@ -31,7 +31,9 @@
     width: 25px;
     height: 16px;
     margin-top: -11%;
-    -webkit-transform: translate(0%, 0%);
+    margin: 15px;
+    text-align: center;
+    /* -webkit-transform: translate(0%, 0%); */
 }
 
 .nutrients {
@@ -125,7 +127,7 @@ and also iPads specifically.
 button {
     /* z-index: -1; */
     width: 100%;
-    height: 168%;
+    height: 30px;
     border: none;
     background-color: #EFA93D;
     cursor: pointer;
