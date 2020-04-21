@@ -8,62 +8,72 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <%- include('../layout/head') %>
-    <title>Meals</title>
+        <title>Meals</title>
 </head>
 
 <body>
     <%- include('../layout/header') %>
-    <main>
-        <div class="choseDite">
-            <form action="/meals" method="POST">
-            <h4 id="choseH4">Plaese Choese Your Dite:</h4><br>
-            <label class="labalDite" for="">Keto</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
-            <label class="labalDite" for="">Paleo</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
-            <label class="labalDite" for="">Vegetarian</label> <input class="redioDite" type="radio" name="Vegan"
-                id=""><br>
-            <label class="labalDite" for="">Vegan</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
-            <label class="labalDite" for="">Mediterranean</label> <input class="redioDite" type="radio" name="Vegan"
-                id=""><br>
-            <button type="submit" id="submit" class="btnPush hvr-pulse-shrink">Submit </button>
-        </form>
-        </div>
-        <% if(locals.meal1) { %>
-         
-        <section id="show">
-            <section class="mealsDet">
-                <div data-aos="zoom-in" class="mealsDiv">
-                    <img src="<%= meal1[0].image %>" >
-                    <h3>Tilte : <%= meal1[0].title %></h3>
-                    <h3>Calories : <%= meal1[0].calories %> </h3>
-                </div>
+        <main>
+            <div class="choseDite">
+                <form action="/meals" method="POST">
+                    <h4 id="choseH4">Please Choose Your Diet:</h4><br>
+                    <label class="labalDite" for="">Keto</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+                    <label class="labalDite" for="">Paleo</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+                    <label class="labalDite" for="">Vegetarian</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+                    <label class="labalDite" for="">Vegan</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+                    <label class="labalDite" for="">Mediterranean</label> <input class="redioDite" type="radio" name="Vegan" id=""><br>
+                    <button type="submit" id="submit" class="btnPush hvr-pulse-shrink">Submit </button>
+                </form>
+            </div>
+            <% if(locals.meal1) { %>
 
-                <div data-aos="zoom-in" class="mealsDiv">
-                    <img src="<%= meal1[1].image %>" >
-                    <h3>Tilte : <%= meal1[1].title %></h3>
-                    <h3>Calories : <%= meal1[1].calories %> </h3>
-                </div>
-                <div data-aos="zoom-in" class="mealsDiv">
-                    <img src="<%= meal1[2].image %>" >
-                    <h3>Tilte : <%= meal1[2].title %></h3>
-                    <h3>Calories : <%= meal1[2].calories %> </h3>
-                </div>
-            </section>
-            
-        </section>
-        <% } %>
+                <section id="show">
+                    <section class="mealsDet">
+                        <div data-aos="zoom-in" class="mealsDiv">
+                            <img src="<%= meal1[0].image %>">
+                            <h3>Tilte :
+                                <%= meal1[0].title %>
+                            </h3>
+                            <h3>Calories :
+                                <%= meal1[0].calories %>
+                            </h3>
+                        </div>
+
+                        <div data-aos="zoom-in" class="mealsDiv">
+                            <img src="<%= meal1[1].image %>">
+                            <h3>Tilte :
+                                <%= meal1[1].title %>
+                            </h3>
+                            <h3>Calories :
+                                <%= meal1[1].calories %>
+                            </h3>
+                        </div>
+                        <div data-aos="zoom-in" class="mealsDiv">
+                            <img src="<%= meal1[2].image %>">
+                            <h3>Tilte :
+                                <%= meal1[2].title %>
+                            </h3>
+                            <h3>Calories :
+                                <%= meal1[2].calories %>
+                            </h3>
+                        </div>
+                    </section>
+
+                </section>
+                <% } %>
 
 
 
 
 
-    </main>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </main>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script>
-        AOS.init();
-    </script>
-    <!-- <script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- <script>
         $(document).ready(function () {
             $('#show').hide();
             $('#submit').on('click', function () {
@@ -72,7 +82,7 @@
         })
 
     </script> -->
-    <%- include('../layout/footer') %>
+        <%- include('../layout/footer') %>
 </body>
 
 </html>

@@ -30,16 +30,15 @@ var request = require("request");
 
 app.get('/about-us', aboutUs);
 
-app.get('/' , getIndex);
-app.get('/info',showCalculater);
-app.get('/result',calculater);
-app.post('/result',usernameExist);
-app.post('/diet' , getMeals);
-app.post('/meals',meals);
+app.get('/', getIndex);
+app.get('/info', showCalculater);
+app.get('/result', calculater);
+app.post('/result', usernameExist);
+app.post('/diet', getMeals);
+app.post('/meals', meals);
 
 
 
-app.get('/test', test);
 
 
 
@@ -150,53 +149,54 @@ function usernameExist(req, res) {
         })
 
 }
-function meals(req,res){
-  let type = req.body.Vegan;
-  // var mealOptions = {
-  //   method: 'GET',
-  //   url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
-  //   qs: {
-  //     timeFrame: 'day',
-  //     targetCalories: calories,
-  //     diet: type
-  //   },
-  //   headers: {
-  //     'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-  //     'x-rapidapi-key': 'b820fef805msh1a93420a1b4c6c8p1e9f5cjsn4cf876c5874e'
-  //   }
-  // };
-  var options1 = {
-    method: 'GET',
-    url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByNutrients',
-    qs: {
-      minCarbs: '0',
-      minProtein: '0',
-      offset: '0',
-      number: '10',
-      random: true,
-      maxCalories: calories,
-      
-      limitLicense: 'false'
-    },
-    headers: {
-      'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-      'x-rapidapi-key': 'b820fef805msh1a93420a1b4c6c8p1e9f5cjsn4cf876c5874e'
-    }
 
-  };
-  var mealsOutput1 = {};
-  request(options1, function (error, response, body) {
-    if (error) throw new Error(error);
-    mealsOutput1 = JSON.parse(body);
-    res.render('pages/meals', { meal1: mealsOutput1 });
-  });
-  
-  // request(mealOptions, function (error, response, body) {
-  //   if (error) throw new Error(error);
-  //   mealsOutput = JSON.parse(body);
-  //   console.log(mealsOutput1);
-    
-  // });
+function meals(req, res) {
+    let type = req.body.Vegan;
+    // var mealOptions = {
+    //   method: 'GET',
+    //   url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
+    //   qs: {
+    //     timeFrame: 'day',
+    //     targetCalories: calories,
+    //     diet: type
+    //   },
+    //   headers: {
+    //     'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+    //     'x-rapidapi-key': 'b820fef805msh1a93420a1b4c6c8p1e9f5cjsn4cf876c5874e'
+    //   }
+    // };
+    var options1 = {
+        method: 'GET',
+        url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByNutrients',
+        qs: {
+            minCarbs: '0',
+            minProtein: '0',
+            offset: '0',
+            number: '10',
+            random: true,
+            maxCalories: calories,
+
+            limitLicense: 'false'
+        },
+        headers: {
+            'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+            'x-rapidapi-key': 'b820fef805msh1a93420a1b4c6c8p1e9f5cjsn4cf876c5874e'
+        }
+
+    };
+    var mealsOutput1 = {};
+    request(options1, function(error, response, body) {
+        if (error) throw new Error(error);
+        mealsOutput1 = JSON.parse(body);
+        res.render('pages/meals', { meal1: mealsOutput1 });
+    });
+
+    // request(mealOptions, function (error, response, body) {
+    //   if (error) throw new Error(error);
+    //   mealsOutput = JSON.parse(body);
+    //   console.log(mealsOutput1);
+
+    // });
 }
 
 
@@ -231,9 +231,6 @@ function aboutUs(req, res) {
     res.render('pages/about-us')
 }
 
-function test(req, res) {
-    res.render('pages/test')
-}
 
 
 
