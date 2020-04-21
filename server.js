@@ -57,52 +57,55 @@ function showCalculater(req, res) {
 }
 
 function calculater(req, res) {
-    let userName = req.query.username;
-    let weightInfo = req.query.weight;
-    let heightInfo = req.query.height;
-    let ageInfo = req.query.age;
-    let genderInfo = req.query.gender;
-    let SQL1 = 'SELECT user_name FROM user_info;';
-    client.query(SQL1)
-        .then(data => {
-            let exist = true;
-            data.rows.forEach(val => {
-                if (val.user_name === userName) { exist = false; }
-            })
-            if (exist) {
-                let SQL = 'INSERT INTO user_info (user_name,weight,height,age,gender) VALUES ($1,$2,$3,$4,$5);';
-                let safeValues = [userName, weightInfo, heightInfo, ageInfo, genderInfo];
-                client.query(SQL, safeValues)
-                    .then(data => { console.log('done'); })
-                var informationOptions = {
-                    method: 'POST',
-                    url: 'https://bmi.p.rapidapi.com/',
-                    headers: {
-                        'x-rapidapi-host': 'bmi.p.rapidapi.com',
-                        'x-rapidapi-key': 'de72feb0d1msh4cd6880191f064fp1248d3jsnb2c8b04da480',
-                        'content-type': 'application/json',
-                        accept: 'application/json'
-                    },
-                    body: {
-                        weight: { value: weightInfo, unit: 'kg' },
-                        height: { value: heightInfo, unit: 'cm' },
-                        sex: genderInfo,
-                        age: ageInfo
-                    },
-                    json: true
-                };
-                request(informationOptions, function(error, response, body) {
-                    if (error) throw new Error(error);
-                    information = body;
-                    calories = information.bmr.value;
-                    res.render('pages/results', { info: information });
-                });
-            } else {
-                console.log('the user name already exist');
-            }
+
+  let userName = req.query.username;
+  let weightInfo = req.query.weight;
+  let heightInfo = req.query.height;
+  let ageInfo = req.query.age;
+  let genderInfo = req.query.gender;
+  let SQL1 = 'SELECT user_name FROM user_info;';
+  client.query(SQL1)
+    .then(data => {
+      let exist = true;
+      data.rows.forEach(val => {
+        if (val.user_name === userName) { exist = false; }
+      })
+      if (exist) {
+        let SQL = 'INSERT INTO user_info (user_name,weight,height,age,gender) VALUES ($1,$2,$3,$4,$5);';
+        let safeValues = [userName, weightInfo, heightInfo, ageInfo, genderInfo];
+        client.query(SQL, safeValues)
+          .then(data => { console.log('done'); })
+        var informationOptions = {
+          method: 'POST',
+          url: 'https://bmi.p.rapidapi.com/',
+          headers: {
+            'x-rapidapi-host': 'bmi.p.rapidapi.com',
+            'x-rapidapi-key': 'de72feb0d1msh4cd6880191f064fp1248d3jsnb2c8b04da480',
+            'content-type': 'application/json',
+            accept: 'application/json'
+          },
+          body: {
+            weight: { value: weightInfo, unit: 'kg' },
+            height: { value: heightInfo, unit: 'cm' },
+            sex: genderInfo,
+            age: ageInfo
+          },
+          json: true
+        };
+        request(informationOptions, function (error, response, body) {
+          if (error) throw new Error(error);
+          information = body;
+          calories = information.bmr.value;
+          res.render('pages/results', { info: information });
+        });
+      } else {
+        
+        res.render('pages/calculate', { msg: 'This user name is already exist' });
+      }
 
 
-        })
+    })
+
 }
 
 function usernameExist(req, res) {
