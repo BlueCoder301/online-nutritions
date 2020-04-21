@@ -41,6 +41,7 @@
     margin-left: 37%;
 }
 
+
 /* .headtable {
     text-align: center;
     padding-left: 14%;
@@ -57,6 +58,7 @@ table {
     margin: 50px auto;
 }
 
+
 /* Zebra striping */
 
 tr:nth-of-type(odd) {
@@ -69,12 +71,14 @@ th {
     font-weight: bold;
 }
 
-td, th {
+td,
+th {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
     font-size: 18px;
 }
+
 
 /* 
 Max width before this PARTICULAR table gets nasty
@@ -82,12 +86,18 @@ This query will take effect for any screen smaller than 760px
 and also iPads specifically.
 */
 
-@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
     table {
         width: 100%;
     }
     /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
     }
     /* Hide table headers (but not display: none;, for accessibility) */
@@ -135,6 +145,7 @@ button:hover {
     border-radius: 50px;
 }
 
+
 /* Pulse Shrink */
 
 @-webkit-keyframes hvr-pulse-shrink {
@@ -159,7 +170,7 @@ button:hover {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+.hvr-pulse-shrink:hover {
     -webkit-animation-name: hvr-pulse-shrink;
     animation-name: hvr-pulse-shrink;
     -webkit-animation-duration: 0.3s;
