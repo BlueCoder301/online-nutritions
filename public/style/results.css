@@ -1,10 +1,11 @@
 #page{
     height:100%;
     width: 100%;
+    background-image: url('https://www.pinterest.com/pin/734579389205856017/feedback/?invite_code=2d7d95ad9e1243ed874356811b503f75&sender_id=795378121598607437');
   }
   
   #resMain{
-    height: 120vh;
+    height: 125vh;
   }
 
 
@@ -17,24 +18,31 @@
      font-variant: small-caps;
     
      }
-
+.container{
+     background-image: url('../img/list-bg.png');
+     width:70%;
+     height: 300px;
+     background-repeat: no-repeat;
+    position: absolute;
+    top: 20%;
+    margin-left: 426px;
+  }
 .res{
     color: #c96e77;
-    background-color:rgb(253, 234, 209);
+    /* background-color:rgb(253, 234, 209); */
     border: solid 1pt #8a0f1d;
     box-sizing: border-box;
     border-radius: 5px;
-     padding: 40px;
+     padding: 20px;
      float: left;
     display: flex;
-    /* flex-wrap: wrap; */
-      flex-direction:column-reverse;
+    flex-wrap: wrap;
+      flex-direction:row;
       width: 300px;
-      height: 200px;
-      margin: 50px;
-      text-align: right;
-      
-      
+      height: 117px;
+      margin: 10px;
+      margin-left: 55px;
+      text-align: right;  
   }
   .res h2{
       text-align: center;
@@ -42,46 +50,71 @@
       font-family: 'Courier New', Courier, monospace;
       font-variant: small-caps;
       font-weight: bold;
-  }
-  
-  .container{
-      margin-left: 15%;
-      /* float: left; */
-
+    
   }
 
   .diet{
-    width: 300px;
+    width: 200px;
     height: 40px;
     color: whitesmoke;
-    margin-right:43%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: larger;
     font-family: 'Rajdhani', sans-serif;
-    float:right;
+    /* float: right; */
     background-color: #97434d;
-  
-
+    margin-left: 30%;
+    position: absolute;
+    top: 70%;
   }
   .diet:hover{
     background-color: wheat;
   }
 .container1
 {
-  margin: 30px;
+  border: solid 1pt #bc9a9a;
+    box-sizing: border-box;
+    margin: 40px 0px 0px 33px;
+    float: left;
+    width: 330px;
+}
+.container1 .asidbtn{
+display: inline-block;
+margin-left: 30px;
 }
   .prevInf{
-     height:30px ;
-     width: 200px;
-      border: solid 1pt;
-      box-sizing: border-box;
-      border-radius: 5px;
-      text-align: center;
-      font-size:large;
-      font-family: 'Courier New', Courier, monospace;
-      font-variant: small-caps;
-      font-weight: bold;
-      display: inline-block;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-variant: small-caps;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    /* display: inline-block; */
+    color: #c96e77;
+    /* background-color: rgb(253, 234, 209);*/
+     
   }
+  .h1{
+    color: #c96e77;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    text-align: center;
+
+  }
+ .asidbtn{
+  width: 100px;
+  height: 30px;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: larger;
+  font-family: 'Rajdhani', sans-serif;
+  /* float: right; */
+  background-color: #97434d;
+  /* margin-left: 30%;
+  position: absolute;
+  top: 90% */
+ }

@@ -237,8 +237,6 @@ function aboutUs(req, res) {
 
 
 
-
-
 app.get('*', (req, res) => {
         res.status(404).send('This route does not exist!!');
     })
@@ -247,6 +245,9 @@ app.get('*', (req, res) => {
 
 //   });
 
+
+  
+  
 
 
 app.listen(PORT, () => {
