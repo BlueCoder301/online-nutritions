@@ -9,6 +9,7 @@
     <%- include('../layout/header') %>
     <!---------------------------------------DATABASE INFORMATION----------------------------->
     <main id="resMain">
+
         <aside class="container1">
             <h1 class="h1">User Information :</h1>
 
@@ -34,7 +35,6 @@
             </form>
             <% } %>
         </aside>
-
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
 
@@ -76,8 +76,13 @@
 
             <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
 
+
         </section>
-        <form class="radioDiet" action="/diet" method="get">
+     
+
+
+        <form class="radioDiet" action="/diet" method="POST">
+           
 
             <input class="diet" type="submit" value="Lets start your diet">
 

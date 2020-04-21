@@ -9,54 +9,56 @@
     <link rel="stylesheet" href="./style/calculate.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<%- include('../layout/head') %> 
-<body>
-    <main>
-        <%- include('../layout/header') %> 
-        
-<!--------------------------------------BMI INFORMATION----------------------------------------->
-        
-        
-        <form action="/result" class="informationForm" method="GET">
-            <fieldset id="">
-                <legend class="bodyy"> Body Mass Index </legend>
-                <div>
-                    <label class="labeles" for="username">User name :</label>
-                    <input type="text" class="user" id="username" name="username" placeholder="Enter your user name" required>
-                </div>
-                <br>
-                <div>
-                    <label class="labeles" for="weight">Weight :</label>
-                    <input type="text" class="user1" id="weight" name="weight" placeholder="Your weight in Kg ex:65" required>
-                </div>
-                <br>
-                <div>
-                    <label class="labeles" for="height"> Height :</label>
-                    <input type="text" class="user2" id="height" name="height" placeholder="Your height in cm ex:165" required>
-                </div>
-                <br>
-                <label class="labeles" for="age"> Age :</label>
-                <input type="text" class="user3" id="age" name="age" placeholder="Your age ex:20" required>
-                <br>
-                
-                <label class="labeles" for="gender"> Gender :</label>
-                
-                <label class="labeles" for="male"><span>Male :</span></label>
-                <input type="radio" name="gender" id="male" class="gender" value="m" required>
-                
-                <label class="labeles" for="female"><span>Female :</span></label>
-                <input type="radio" name="gender" id="female" class="gender" value="f" required>
-                <input type="submit" class="calc" value="Calculate">
-            </fieldset>
-            </form>
-<!---------------------------------------END OF BMI INFORMATION--------------------------------->
-                
-            
-<!--------------------------------------USER INFORMATION---------------------------------------->
-            
+<%- include('../layout/head') %>
+
+    <body>
+        <main>
+            <%- include('../layout/header') %>
+
+                <!--------------------------------------BMI INFORMATION----------------------------------------->
+
+
+                <form action="/result" class="informationForm" method="GET">
+                    <fieldset id="">
+                        <legend class="bodyy"> Body Mass Index </legend>
+                        <div>
+                            <label class="labeles" for="username">User name :</label>
+                            <input type="text" class="user" id="username" name="username" placeholder="Enter your user name" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label class="labeles" for="weight">Weight :</label>
+                            <input type="text" class="user1" id="weight" name="weight" placeholder="Your weight in Kg ex:65" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label class="labeles" for="height"> Height :</label>
+                            <input type="text" class="user2" id="height" name="height" placeholder="Your height in cm ex:165" required>
+                        </div>
+                        <br>
+                        <label class="labeles" for="age"> Age :</label>
+                        <input type="text" class="user3" id="age" name="age" placeholder="Your age ex:20" required>
+                        <br>
+
+                        <label class="labeles" for="gender"> Gender :</label>
+
+                        <label class="labeles" for="male"><span>Male :</span></label>
+                        <input type="radio" name="gender" id="male" class="gender" value="m" required>
+
+                        <label class="labeles" for="female"><span>Female :</span></label>
+                        <input type="radio" name="gender" id="female" class="gender" value="f" required>
+                        <input type="submit" class="calc" value="Calculate">
+                    </fieldset>
+                </form>
+                <!---------------------------------------END OF BMI INFORMATION--------------------------------->
+
+
+                <!--------------------------------------USER INFORMATION---------------------------------------->
+
                 <form action="/result" method="POST" class="username">
                     <fieldset id='login'>
                         <legend class="log-in"> Log in </legend>
+
                         <div class="fa"></div>
                         <i class="fal fa-user"></i></div>
                     <br>
@@ -64,19 +66,21 @@
                     <input type="text" class="user5" name="previousUsername" id="user" placeholder="Enter your user name" required>
                     <br>
                     <input type="submit" class="user6" value="Get my information"></fieldset>
+            
+
                 </form>
                 <% if(locals.elsee) { %>
                     <p>the user name is not exist</p>
                     <% } %>
-<!-------------------------------------------END OF USER INFORMATION---------------------------->
+                        <!-------------------------------------------END OF USER INFORMATION---------------------------->
 
 
-<!---------------------------------------END OF SEARCH INFORMATION------------------------------>
+                        <!---------------------------------------END OF SEARCH INFORMATION------------------------------>
 
-    </main>
-    <%- include('../layout/footer') %> 
+        </main>
+        <%- include('../layout/footer') %>
 
 
-</body>
+    </body>
 
 </html>
