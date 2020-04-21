@@ -39,6 +39,7 @@ img#logo {
 body{
   height:100%;
   width: 100%;
+  background: #fbfbfb14;
 }
 
 main{
@@ -67,7 +68,7 @@ form.username {
   width: 200px;
   padding: 12px 29px;
   margin-left: 66px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -190,7 +191,7 @@ font-size: large;
   margin-bottom: 10px;
 }
  #username{
-    margin-top: 30px;
+    margin-top: 40px;
  }
  .calc {
    /* width: 100%; */
@@ -229,19 +230,21 @@ font-size: large;
    margin-left:20px;
    
  }
- .res{
-  box-sizing: border-box;
-  border-radius: 5px;
-   padding: 50px;
-   float: left;
-  display: flex;
-  flex-wrap: wrap;
-    flex-direction: row;
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-    /* background-image:image('.'); */
-}
+ .icn{
+   width: 49px;
+  height: 38px;
+  font-size: 2.3em;
+ }
+i.far.fa-user{
+  /* width: 49px; */
+  /* height: 38px; */
+  /* padding-top: 11px; */
+  /* margin-right: 5px; */
+  /* margin-right: 5px; */
+  text-align: center;
+  font-size: 2.3em;
+} 
+
 
 /*-------------- footer section ---------------*/
 

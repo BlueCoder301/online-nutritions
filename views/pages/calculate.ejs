@@ -55,13 +55,19 @@
 
                 <!--------------------------------------USER INFORMATION---------------------------------------->
 
-                <form action="/result" method="POST" class="username">
+                <form action="/result1" method="GET" class="username">
                     <fieldset id='login'>
                         <legend class="log-in"> Log in </legend>
-                        <label for="user" class="user4">User name :</label>
-                        <input type="text" class="user5" name="previousUsername" id="user" placeholder="Enter your user name" required>
-                        <br>
-                        <input type="submit" class="user6" value="Get my information"></fieldset>
+
+                        <div class="icn">
+                            <i class="far fa-user"></i></div>
+                    <br>
+                    <label for="user" class="user4">User name :</label>
+                    <input type="text" class="user5" name="previousUsername" id="user" placeholder="Enter your user name" required>
+                    <br>
+                    <input type="submit" class="user6" value="Get my information"></fieldset>
+            
+
                 </form>
                 <% if(locals.elsee) { %>
                     <p>the user name is not exist</p>
@@ -69,7 +75,6 @@
                         <!-------------------------------------------END OF USER INFORMATION---------------------------->
 
 
-                        <!---------------------------------------END OF SEARCH INFORMATION------------------------------>
 
         </main>
         <%- include('../layout/footer') %>
