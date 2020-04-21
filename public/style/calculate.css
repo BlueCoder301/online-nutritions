@@ -39,6 +39,7 @@ img#logo {
 body{
   height:100%;
   width: 100%;
+  background: #fbfbfb14;
 }
 
 main{
@@ -229,14 +230,19 @@ font-size: large;
    margin-left:20px;
    
  }
- 
-.fa {
-  width: 60px;
-  height: 50px; 
-   float: left;
-  margin-left: 180px;
-  font-size: 3.3em;
- 
+ .icn{
+   width: 49px;
+  height: 38px;
+  font-size: 2.3em;
+ }
+i.far.fa-user{
+  /* width: 49px; */
+  /* height: 38px; */
+  /* padding-top: 11px; */
+  /* margin-right: 5px; */
+  /* margin-right: 5px; */
+  text-align: center;
+  font-size: 2.3em;
 } 
 
 
