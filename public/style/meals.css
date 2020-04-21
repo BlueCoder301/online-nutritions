@@ -25,10 +25,15 @@
     padding-top: 10%;
 }
 
+.labalDite {
+    float: left;
+}
+
 .redioDite {
     /* z-index: -1; */
     /* display: block; */
     width: 25px;
+    float: right;
     height: 16px;
     margin-top: -11%;
     margin: 15px;
