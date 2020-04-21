@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 /* ---------------------   slider   --------------------- */
 
 main{
@@ -42,6 +43,68 @@ img#logo {
     height: 100vh;
 }
 
+#about{
+    margin-top: 400px;
+  }
+
+
+  #about #anmi {
+    position: absolute;
+    z-index: 1;
+    font-size: 45px;
+    font-family: monospace;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.575);
+    color: #272525;
+    padding: 0 10%;
+    left: 93%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+  #anmi {
+    color:#999;
+    text-transform: uppercase;
+    font-size:39px;
+    /* font-weight:bold; */
+    padding-top:200px;  
+    position:fixed;
+    width:100%;
+    bottom:39%;
+    display:block;
+  }
+  #flip {
+    height:50px;
+    overflow:hidden;
+  }
+  #flip > div > div {
+    color:#fff;
+    padding:0px 12px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+  }
+  #flip div:first-child {
+    animation: show 6s linear infinite;
+  }
+  #flip div:first-child div {
+    background: rgb(202, 145, 164);
+  }
+  #flip .anim12 {
+    background: rgb(202, 145, 164);
+  }
+  #flip div:last-child div {
+    background: rgb(202, 145, 164);
+  }
+  @keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+  }
+  
 .principal {
     left: 50%;
     top: 50%;
