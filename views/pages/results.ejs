@@ -18,21 +18,37 @@
             <% var x=''; %>
             <% if(DB.gender == 'm')  x = 'Male'; %>
             <% if(DB.gender == 'f')  x = 'Female'; %>
+            <form action="/update/<%= DB.user_name %>?_method=put" method="POST">
+                <p class="prevInf">Your username:<span> <%= DB.user_name%></span></p>
 
-            <p class="prevInf">Your username: <%= DB.user_name%></p>
+                <p class="prevInf">your weight: <span class="spann"> <%= DB.weight%></span><input type="text"
+                        name="weight" class="updateForm" value="<%= DB.weight%>" style="width: 30px;"></p>
 
-            <p class="prevInf">your weight: <%= DB.weight%></p>
 
-            <p class="prevInf">Your height: <%= DB.height%></p>
+                <p class="prevInf">Your height: <span class="spann"> <%= DB.height%></span> <input type="text"
+                        name="height" class="updateForm" value="<%= DB.height%>" style="width: 30px;"></p>
 
-            <p class="prevInf">Your age: <%= DB.age%></p>
 
-            <p class="prevInf">Your gender: <%= x %></p>
-            <form action="">
-                <input class="asidbtn" type="submit" value="Update">
+                <p class="prevInf">Your age: <span class="spann"> <%= DB.age%></span><input type="text" name="age"
+                        class="updateForm" value="<%= DB.age%>" style="width: 30px;"></p>
 
-                <input class="asidbtn" type="submit" value="Delete">
+
+                <p class="prevInf">Your gender: <%= x %></p>
+
+                <center><input type="submit" value="Save" class="updateForm" id="saveB"></center>
+
             </form>
+
+
+
+
+
+
+
+            <center><input class="asidbtn" type="submit" value="UPDATE"></center>
+            <!-- -------upadate forms---- -->
+
+
             <% } %>
         </aside>
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
@@ -55,40 +71,50 @@
                 <div class="results">
                     <fieldset class="res">
                         <legend class="data">Ideal Weight:</legend>
-                        <h2>Ideal Weight:<%= info.ideal_weight%></h2>
+                        <h2><%= info.ideal_weight%></h2>
                     </fieldset>
 
                 </div class="results">
                 <fieldset class="res">
                     <legend class="data">Risk:</legend>
-                    <h2>Risk:<%= info.bmi.risk%></h2>
+                    <h2><%= info.bmi.risk%></h2>
                 </fieldset>
             </div>
 
             <div class="results">
                 <fieldset class="res">
                     <legend class="data">Basal Metabolic Rate:</legend>
-                    <span>is a minimum number of calories required for basic functions at rest,</span>
+                    <span>which is a minimum number of calories required for basic functions at rest :</span>
                     <h2> <%= info.bmr.value%></h2>
                 </fieldset>
             </div>
             <% } %>
 
-            <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
+            <!------------------------------------END OF Calculation INFORMATION------------------------------------------>
 
 
         </section>
-     
+
 
 
         <form class="radioDiet" action="/diet" method="POST">
-           
+
 
             <input class="diet" type="submit" value="Lets start your diet">
 
         </form>
     </main>
     <%- include('../layout/footer') %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.updateForm').hide();
+            $('.spann').show();
+            $('.asidbtn').on('click', function () {
+                $('.updateForm').toggle();
+                $('.spann').toggle();
+            })
+        })</script>
 </body>
 
 </html>

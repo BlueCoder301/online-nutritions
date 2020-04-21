@@ -2,7 +2,7 @@
 const ejsLint = require('ejs-lint');
 
 let mealsOutput = {};
-
+let up = {};
 let information = {};
 let searchResults = {};
 var calories;
@@ -33,9 +33,10 @@ app.get('/about-us', aboutUs);
 app.get('/', getIndex);
 app.get('/info', showCalculater);
 app.get('/result', calculater);
-app.post('/result', usernameExist);
+app.get('/result1', usernameExist);
 app.post('/diet', getMeals);
 app.post('/meals', meals);
+app.put('/update/:id',updateInfo);
 
 
 
@@ -107,7 +108,7 @@ function calculater(req, res) {
 }
 
 function usernameExist(req, res) {
-  let userNameKeyword = req.body.previousUsername;
+  let userNameKeyword = req.query.previousUsername;
   let SQL = `SELECT user_name FROM user_info ;`;
   client.query(SQL)
     .then(data => {
@@ -225,6 +226,19 @@ function searchRout(req, res) {
     res.render('pages/search', { food: searchResults });
   });
 }
+
+function updateInfo(req,res){
+  let unique = req.params.id;
+  let {weight,height,age} = req.body;
+  let SQL = 'UPDATE user_info SET weight=$1,height=$2,age=$3 WHERE user_name=$4;';
+  let safe = [weight,height,age,unique];
+  client.query(SQL,safe)
+    .then(res.redirect(`/result1?previousUsername=${unique}`))
+  
+   
+}
+
+
 
 
 function aboutUs(req, res) {
