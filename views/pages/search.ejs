@@ -3,26 +3,36 @@
 
 
   <%- include('../layout/head') %>
+<!-- <link rel="stylesheet" href="style/search.css"> -->
 
-
-<body>
+<body class="searchBody">
+  <main class="mainSearch">
     <%- include('../layout/header') %>
-    <main>
-        <% food.results.forEach(val=>{ %>
-            <div style="border: 1px solid red; padding: 20px;">
-                <img src="<%= val.image %>" >
-                <p >Title: <%= val.title%></p>
-                <p >Calories: <%= val.calories%></p>
-                <p >Protein: <%= val.protein%></p>
-                <p >Fat: <%= val.fat%></p>
-                <p >Carbs: <%= val.carbs%></p>
-            </div>
+        
+            <div class="container2">
+
+                <% food.results.forEach(val=>{ %>
+                <div class="center-div"></div>
+                <div class=" box-one "></div>
+                <div class="bgimg box">
+
+                  <img src="<%= val.image %>" ></div>
+                <div class="skew"></div>
+                
+                
+                  <ul>
+                   <li>Title: <%= val.title%></li> 
+                  <li>Carbs: <%= val.carbs%></li>
+                   <li>Fat: <%= val.fat%></li> 
+                 <li>  Protein: <%= val.protein%></li> 
+                    <li>Calories: <%= val.calories%></li> 
+                  </ul>
+           
         <%})%>
-    </main>
-
-
+   
     <%- include('../layout/footer') %>
     <%- include('../layout/js-links') %>
+    </main>
 </body>
 
 </html>

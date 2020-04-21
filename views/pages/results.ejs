@@ -19,18 +19,18 @@
             <% if(DB.gender == 'm')  x = 'Male'; %>
             <% if(DB.gender == 'f')  x = 'Female'; %>
 
-            <p class="prevInf">Your username: <%= DB.user_name%><input type="text" class="updateForm" value="<%= DB.user_name%>"> </p>
+            <p class="prevInf"> Username: <%= DB.user_name%><input type="text" class="updateForm" value="<%= DB.user_name%>"> </p>
 
-            <p class="prevInf">your weight: <%= DB.weight%><input type="text" class="updateForm" value="<%= DB.weight%>"></p>
+            <p class="prevInf">Weight: <%= DB.weight%><input type="text" class="updateForm" value="<%= DB.weight%>"></p>
             
 
-            <p class="prevInf">Your height: <%= DB.height%> <input type="text" class="updateForm" value="<%= DB.height%>"></p>
+            <p class="prevInf">Height: <%= DB.height%> <input type="text" class="updateForm" value="<%= DB.height%>"></p>
            
 
-            <p class="prevInf">Your age: <%= DB.age%><input type="text" class="updateForm" value="<%= DB.age%>"></p>
+            <p class="prevInf">Age: <%= DB.age%><input type="text" class="updateForm" value="<%= DB.age%>"></p>
             
 
-            <p class="prevInf" >Your gender: <%= x %><input type="text" class="updateForm" value=" <%= x %>"></p>
+            <p class="prevInf" >Gender: <%= x %><input type="text" class="updateForm" value=" <%= x %>"></p>
             
         
         
@@ -80,7 +80,7 @@
             <div class="results">
                 <fieldset class="res">
                     <legend class="data">Basal Metabolic Rate:</legend>
-                    <span>which is a minimum number of calories required for basic functions at rest :</span>
+                    <h2>Which is a minimum number of calories required for basic functions at rest :</h2>
                     <h2> <%= info.bmr.value%></h2>
                 </fieldset>
             </div>
