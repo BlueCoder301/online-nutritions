@@ -9,26 +9,32 @@
     <%- include('../layout/header') %>
     <!---------------------------------------DATABASE INFORMATION----------------------------->
     <main id="resMain">
-        <section class="container1">
+        <aside class="container1">
+            <h1 class="h1">User Information :</h1>
 
 
-        <% if (locals.DB) { %>
-        <% var x=''; %>
-        <% if(DB.gender == 'm')  x = 'Male'; %>
-        <% if(DB.gender == 'f')  x = 'Female'; %>
+            <% if (locals.DB) { %>
+            <% var x=''; %>
+            <% if(DB.gender == 'm')  x = 'Male'; %>
+            <% if(DB.gender == 'f')  x = 'Female'; %>
 
-        <p class="prevInf">Your username: <%= DB.user_name%></p>
+            <p class="prevInf">Your username: <%= DB.user_name%></p>
 
-        <p class="prevInf">your weight: <%= DB.weight%></p>
+            <p class="prevInf">your weight: <%= DB.weight%></p>
 
-        <p class="prevInf">Your height: <%= DB.height%></p>
+            <p class="prevInf">Your height: <%= DB.height%></p>
 
-        <p class="prevInf">Your age: <%= DB.age%></p>
+            <p class="prevInf">Your age: <%= DB.age%></p>
 
-        <p class="prevInf">Your gender: <%= x %></p>
+            <p class="prevInf">Your gender: <%= x %></p>
+            <form action="">
+                <input class="asidbtn" type="submit" value="Update">
 
-        <% } %>
-    </section>
+                <input class="asidbtn" type="submit" value="Delete">
+            </form>
+            <% } %>
+        </aside>
+
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
 
@@ -36,41 +42,43 @@
         <!---------------------------------------Calculation INFORMATION-------------------------------->
 
         <section class="container">
-        <% if(locals.info){ %>
+            <!-- <h1>Previous Results:</h1> -->
+            <% if(locals.info){ %>
 
-        <div class="results">
-            <fieldset class="res">
-                <legend class="data">Status:</legend>
-                <h2><%= info.bmi.status%></h2>
-            </fieldset>
-        </div>
-        <div>
             <div class="results">
                 <fieldset class="res">
-                    <legend class="data">Ideal Weight:</legend>
-                    <h2><%= info.ideal_weight%></h2>
+                    <legend class="data">Status:</legend>
+                    <h2><%= info.bmi.status%></h2>
                 </fieldset>
+            </div>
+            <div>
+                <div class="results">
+                    <fieldset class="res">
+                        <legend class="data">Ideal Weight:</legend>
+                        <h2>Ideal Weight:<%= info.ideal_weight%></h2>
+                    </fieldset>
 
-            </div class="results">
-            <fieldset class="res">
-                <legend class="data">Risk:</legend>
-                <h2><%= info.bmi.risk%></h2>
-            </fieldset>
-        </div>
+                </div class="results">
+                <fieldset class="res">
+                    <legend class="data">Risk:</legend>
+                    <h2>Risk:<%= info.bmi.risk%></h2>
+                </fieldset>
+            </div>
 
-        <div class="results">
-            <fieldset class="res">
-                <legend class="data">BMR:</legend>
-                <h2> <%= info.bmr.value%></h2>
-            </fieldset>
-        </div>
-        <% } %>
-</section>
-        <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
+            <div class="results">
+                <fieldset class="res">
+                    <legend class="data">Basal Metabolic Rate:</legend>
+                    <span>is a minimum number of calories required for basic functions at rest,</span>
+                    <h2> <%= info.bmr.value%></h2>
+                </fieldset>
+            </div>
+            <% } %>
 
+            <!--------------------------------------END OF Calculation INFORMATION---------------------------------------------->
 
+        </section>
         <form class="radioDiet" action="/diet" method="get">
-           
+
             <input class="diet" type="submit" value="Lets start your diet">
 
         </form>
