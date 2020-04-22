@@ -88,7 +88,13 @@
                     <h3> <%= info.bmr.value%></h3>
                 </fieldset>
             </div>
-            <% } %> <input class="diet hvr-pulse-shrink" type="submit" value="Lets start your diet">
+            <form class="radioDiet" action="/diet" method="POST">
+
+                <input class="diet hvr-pulse-shrink" type="submit" value="Lets start your diet">
+               
+    
+            </form>
+            <% } %> 
 
             <!------------------------------------END OF Calculation INFORMATION------------------------------------------>
 
@@ -98,12 +104,7 @@
 
         
 
-        <form class="radioDiet" action="/diet" method="POST">
-
-
-           
-
-        </form>
+        
 
     </main>
     <%- include('../layout/footer') %>
