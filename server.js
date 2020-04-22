@@ -223,7 +223,7 @@ function searchRout(req, res) {
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
     searchResults = JSON.parse(body);;
-    res.render('pages/search', { food: searchResults });
+    res.render('pages/search', { food: searchResults , search: keyWord });
   });
 }
 
