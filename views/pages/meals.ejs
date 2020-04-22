@@ -18,24 +18,31 @@
 
         <div class="choseDite">
             <form action="/meals" method="POST">
-                <h4 id="choseH4">Please Choose Your Diet:</h4><br>
+                <fieldset>
+                <legend class="bodyy">Choose Your Diet: </legend>
+                <br>
                 <div>
-                    <label class="labalDite" for="">Keto </label> <br>
-                    <label class="labalDite" for="">Paleo</label> <br>
-                    <label class="labalDite" for="">Vegetarian</label><br>
-                    <label class="labalDite" for="">Vegan</label><br>
-                    <label class="labalDite" for="">Mediterranean</label><br>
+                    <div class="leftLabel">
+                    <label class="labeles" for="">Keto </label>
+                    <input class="gender" type="radio" name="Vegan" id=""></div>
+                    <div class="leftLabel">
+                    <label class="labeles" for="">Paleo</label>
+                    <input class="gender" type="radio" name="Vegan" id=""></div>
+                    <div class="leftLabel">
+                    <label class="labeles fix vig" for="">Vegetarian</label>
+                    <input class="gender" type="radio" name="Vegan" id=""></div>
+                    <div class="leftLabel">
+                    <label class="labeles" for="">Vegan</label>
+                    <input class="gender" type="radio" name="Vegan" id=""></div>
+                    <div class="leftLabel">
+                    <label class="labeles fix hi" for="">Mediterranean</label>
+                    <input class="gender" type="radio" name="Vegan" id=""></div>
                 </div>
-                <div class="float-right">
-                    <input class="redioDite" type="radio" name="Vegan" id=""> <br>
-                    <input class="redioDite" type="radio" name="Vegan" id=""><br>
-                    <input class="redioDite" type="radio" name="Vegan" id=""><br>
-                    <input class="redioDite" type="radio" name="Vegan" id=""><br>
-                    <input class="redioDite" type="radio" name="Vegan" id=""><br>
-                </div>
+                <br>
+            
                 <div style="clear: both;"></div>
-                <button type="submit" id="submit" class="btnPush hvr-pulse-shrink">Submit </button>
-            </form>
+                <input type="submit" id="submit" class="calc  btnPush hvr-pulse-shrink" value="Generate Meals"> 
+            </fieldset></form>
         </div>
 
 
