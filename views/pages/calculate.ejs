@@ -10,6 +10,7 @@
 </head>
 <%- include('../layout/head') %>
 
+<<<<<<< HEAD
     <body>
         <main>
             <%- include('../layout/header') %>
@@ -80,5 +81,116 @@
 
 
     </body>
+=======
+<body>
+    <main>
+        <%- include('../layout/header') %>
+
+        <!--------------------------------------BMI INFORMATION----------------------------------------->
+
+
+        <form action="/result" class="informationForm" method="GET">
+            <fieldset id="">
+                <legend class="bodyy"> Body Mass Index </legend>
+                <div>
+                    <label class="labeles" for="username">User name :</label>
+                    <input type="text" class="user" id="username" name="username" placeholder="Enter your user name"
+                        required>
+                </div>
+                <br>
+                <div>
+                    <label class="labeles" for="weight">Weight :</label>
+                    <input type="text" class="user1" id="weight" name="weight" placeholder="Your weight in Kg ex:65"
+                        required>
+                </div>
+                <br>
+                <div>
+                    <label class="labeles" for="height"> Height :</label>
+                    <input type="text" class="user2" id="height" name="height" placeholder="Your height in cm ex:165"
+                        required>
+                </div>
+                <br>
+                <label class="labeles" for="age"> Age :</label>
+                <input type="text" class="user3" id="age" name="age" placeholder="Your age ex:20" required>
+                <br>
+
+                <label class="labeles" for="gender"> Gender :</label>
+
+                <label class="labeles" for="male"><span>Male :</span></label>
+                <input type="radio" name="gender" id="male" class="gender" value="m" required>
+
+                <label class="labeles" for="female"><span>Female :</span></label>
+                <input type="radio" name="gender" id="female" class="gender" value="f" required>
+                <input type="submit" class="calc" value="Calculate">
+            </fieldset>
+        </form>
+        <!---------------------------------------END OF BMI INFORMATION--------------------------------->
+
+
+        <!--------------------------------------USER INFORMATION---------------------------------------->
+
+        <form action="/result1" method="GET" class="username">
+            <fieldset id='login'>
+                <legend class="log-in"> Log in </legend>
+
+                <div class="icn">
+                    <i class="far fa-user"></i></div>
+                <br>
+                <label for="user" class="user4">User name :</label>
+                <input type="text" class="user5" name="previousUsername" id="user" placeholder="Enter your user name"
+                    required>
+                <br>
+                <input type="submit" class="user6" value="Get my information">
+            </fieldset>
+
+
+        </form>
+        <% if(locals.elsee) { %>
+        <p>the user name is not exist</p>
+        <% } %>
+        <!-------------------------------------------END OF USER INFORMATION---------------------------->
+
+        <% if(locals.msg) { %>
+        <div id="myModal" class="modal">
+
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="msg">This user name is already exist</h3>
+            </div>
+
+        </div>
+        <% } %>
+
+    </main>
+    <%- include('../layout/footer') %>
+    <script>
+        var modal = document.getElementById("myModal");
+
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+
+        modal.style.display = "block";
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+>>>>>>> 764cc475d8ee4fa087df02a73c6e8cf70167ede6
 
 </html>

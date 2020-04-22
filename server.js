@@ -2,7 +2,7 @@
 const ejsLint = require('ejs-lint');
 
 let mealsOutput = {};
-let up = {};
+
 let information = {};
 let searchResults = {};
 var calories;
@@ -36,11 +36,10 @@ app.get('/result', calculater);
 app.get('/result1', usernameExist);
 app.post('/diet', getMeals);
 app.post('/meals', meals);
-app.put('/update/:id',updateInfo);
+app.put('/update/:id', updateInfo);
 
 
 
-app.get('/test', test);
 
 
 
@@ -59,6 +58,7 @@ function showCalculater(req, res) {
 }
 
 function calculater(req, res) {
+
   let userName = req.query.username;
   let weightInfo = req.query.weight;
   let heightInfo = req.query.height;
@@ -100,11 +100,13 @@ function calculater(req, res) {
           res.render('pages/results', { info: information });
         });
       } else {
-        console.log('the user name already exist');
+
+        res.render('pages/calculate', { msg: 'This user name is already exist' });
       }
 
 
     })
+
 }
 
 function usernameExist(req, res) {
@@ -151,6 +153,7 @@ function usernameExist(req, res) {
     })
 
 }
+
 function meals(req, res) {
   let type = req.body.Vegan;
   // var mealOptions = {
@@ -227,27 +230,22 @@ function searchRout(req, res) {
   });
 }
 
-function updateInfo(req,res){
+function updateInfo(req, res) {
   let unique = req.params.id;
-  let {weight,height,age} = req.body;
+  let { weight, height, age } = req.body;
   let SQL = 'UPDATE user_info SET weight=$1,height=$2,age=$3 WHERE user_name=$4;';
-  let safe = [weight,height,age,unique];
+  let safe = [weight, height, age, unique];
   client.query(SQL,safe)
-    .then(res.redirect(`/result1?previousUsername=${unique}`))
-  
-   
+    .then(data =>{
+        res.redirect(`/result1?previousUsername=${unique}`);
+    })
 }
-
-
 
 
 function aboutUs(req, res) {
   res.render('pages/about-us')
 }
 
-function test(req, res) {
-  res.render('pages/test')
-}
 
 
 
@@ -262,10 +260,5 @@ client.connect()
     app.listen(PORT, () => {
       console.log(`Listening on PORT ${PORT}`)
     })
+
   });
-
-
-  
-  
-
-

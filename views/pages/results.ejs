@@ -9,12 +9,12 @@
     <%- include('../layout/header') %>
     <!---------------------------------------DATABASE INFORMATION----------------------------->
     <main id="resMain">
-
+        <% if (locals.DB) { %>
         <aside class="container1">
             <h1 class="h1">User Information</h1>
 
 
-            <% if (locals.DB) { %>
+
             <% var x=''; %>
             <% if(DB.gender == 'm')  x = 'Male'; %>
             <% if(DB.gender == 'f')  x = 'Female'; %>
@@ -84,7 +84,11 @@
             <div class="results">
                 <fieldset class="res">
                     <legend class="data">Basal Metabolic Rate:</legend>
+<<<<<<< HEAD
                     <h3>Which is a minimum number of calories required for basic functions at rest :</h3>
+=======
+                    <span>which is a minimum number of calories required for basic functions at rest :</span>
+>>>>>>> 764cc475d8ee4fa087df02a73c6e8cf70167ede6
                     <h3> <%= info.bmr.value%></h3>
                 </fieldset>
             </div>
@@ -103,6 +107,7 @@
             <input class="diet" type="submit" value="Lets start your diet">
 
         </form>
+
     </main>
     <%- include('../layout/footer') %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -114,7 +119,10 @@
                 $('.updateForm').toggle();
                 $('.spann').toggle();
             })
-        })</script>
+        })
+
+    </script>
+
 </body>
 
 </html>
