@@ -1,0 +1,69 @@
+
+/* **************************************************************************************** */
+.searchBody{
+  height:100%;
+  width: 100%;
+  /* background-image: url("https://mcdn.wallpapersafari.com/medium/81/63/vYo0n3.jpg"); */
+  /* background-repeat: no-repeat; */
+
+}
+.mainSearch{
+
+ height: 372vh;
+
+}
+/* **************************************************************************************** */
+
+ .searchPage{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 14%;
+  margin-left: 88px;
+  float: left;
+  width: min-content;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  border: 2px solid rgb(206, 97, 142) ;
+  border-radius: 30px;
+  font-family: 'Baskervville', serif;
+  margin-bottom: -8%;
+  background-color: #e6d7d9;
+} 
+.searchPage img{
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+  margin-left: -4%;
+  border-radius: 23px;
+}
+.nutri{
+ float: left; 
+ width: -webkit-fill-available;
+ margin-left: 10%;
+ list-style: none;
+ font-family: monospace;
+ list-style: none;
+color:#97434d ;
+font-size: large;
+font-weight: bold;
+}
+
+
+.hvr-bounce-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-out:hover, .hvr-bounce-out:focus, .hvr-bounce-out:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+

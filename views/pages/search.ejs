@@ -5,24 +5,38 @@
   <%- include('../layout/head') %>
 
 
-<body>
+<body class="searchBody">
     <%- include('../layout/header') %>
-    <main>
+    <main class="mainSearch">
+               <!-- <h1> Recipes with :</h1> -->
         <% food.results.forEach(val=>{ %>
-            <div style="border: 1px solid red; padding: 20px;">
-                <img src="<%= val.image %>" >
-                <p >Title: <%= val.title%></p>
-                <p >Calories: <%= val.calories%></p>
-                <p >Protein: <%= val.protein%></p>
-                <p >Fat: <%= val.fat%></p>
-                <p >Carbs: <%= val.carbs%></p>
+
+            <div data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500" class="searchPage ">
+              
+
+                <img src="<%= val.image %>" class="hvr-bounce-out">
+                <div>
+                <ul class="nutri">
+                  <li>Title: <%= val.title%></li>
+                  <li>Calories: <%= val.calories%></li>
+                  <li>Protein: <%= val.protein%></li>
+                  <li>Fat: <%= val.fat%></li>
+                  <li>Carbs: <%= val.carbs%></li>
+                </ul></div>
             </div>
         <%})%>
     </main>
+    
+
 
 
     <%- include('../layout/footer') %>
     <%- include('../layout/js-links') %>
+    <script >
+      AOS.init();
+    </script>
 </body>
 
 </html>
