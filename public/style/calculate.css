@@ -25,7 +25,7 @@ img#logo {
   text-transform: uppercase;
   color: white;
   font-size: 20px;
-  font-family: monospace;
+  font-family: 'Rajdhani', sans-serif;
   letter-spacing: 2px;
   font-weight: 600;
   padding: 25px;
@@ -39,7 +39,7 @@ img#logo {
 body{
   height:100%;
   width: 100%;
-  background: #fbfbfb14;
+  background: rgba(245, 241, 241, 0.89);
 }
 
 main{
@@ -79,17 +79,17 @@ form.username {
 }
 
 .user6:hover{
-    background-color: wheat;
+ background-color: #d49aa1;
 }
 
 .user6 {
   /* width: 100%; */
   width: 203px;
-  background-color: #EE99A3;
+  background-color: #97434d;
   color: white;
   padding: 14px 20px;
   margin-left: 20%;
-  margin-top: 11%;
+  margin-top: 8%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -195,21 +195,57 @@ font-size: large;
  }
  .calc {
    /* width: 100%; */
-   width: 300px;
-   background-color: #EE99A3;
+   width: 200px;
+   background-color:#97434d;
    color: white;
    padding: 14px 20px;
-   margin-left: 16%;
+   margin-left: 32%;
    margin-top: 11%;
    border: none;
    border-radius: 4px;
    cursor: pointer;
    font-size: larger;
-   font-family: 'Rajdhani', sans-serif;
+   font-family: sans-serif;
  }
  .calc{
    width: 200;
  }
+ /* Pulse Shrink */
+
+@-webkit-keyframes hvr-pulse-shrink {
+  to {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse-shrink {
+  to {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+  }
+}
+
+.hvr-pulse-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+  -webkit-animation-name: hvr-pulse-shrink;
+  animation-name: hvr-pulse-shrink;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
  .gender{
    /* position: absolute; */
    /* top: 0;
@@ -222,7 +258,7 @@ font-size: large;
     padding-left: 50px;
  }
  .calc:hover {
-   background-color: wheat;
+    background-color: #d49aa1;;
  }
  .labeles{
     font-family: 'Rajdhani', sans-serif;
@@ -235,19 +271,25 @@ font-size: large;
   height: 38px;
   font-size: 2.3em;
  }
-i.far.fa-user{
-  /* width: 49px; */
-  /* height: 38px; */
-  /* padding-top: 11px; */
-  /* margin-right: 5px; */
-  /* margin-right: 5px; */
-  text-align: center;
-  font-size: 2.3em;
-} 
-
+ .fa-user {
+  /* content: "\f007"; */
+  color: #96434d;
+  position: absolute;
+  top: 52%;
+  right: 28%;
+}
 
 /*-------------- footer section ---------------*/
-
+.footer .footer-content h1, .footer .footer-content h2 {
+  color: rgb(87, 82, 86);
+  font-family: 'Rajdhani', sans-serif;
+}
+.footer .footer-content .about h1 span {
+  color: rgb(206, 140, 161);
+  margin-right: -4%;
+  font-family: 'Rajdhani', sans-serif;
+}
+/* 
 .footer {
   background-color: rgba(51, 42, 42, 0.13);
   columns: white;
@@ -347,28 +389,28 @@ i.far.fa-user{
 .modal {
   display: none;
   /* Hidden by default */
-  position: fixed;
+  /* position: fixed; */
   /* Stay in place */
-  z-index: 1;
+  /* z-index: 1; */
   /* Sit on top */
-  padding-top: 100px;
+  /* padding-top: 100px; */
   /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
+  /* left: 0; */
+  /* top: 0; */
+  /* width: 100%; */
   /* Full width */
-  height: 100%;
+  /* height: 100%; */
   /* Full height */
-  overflow: auto;
+  /* overflow: auto; */
   /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   /* Black w/ opacity */
-}
+/* } */
 
 /* Modal Content */
-.modal-content {
+/* .modal-content {
   background-color: #fefefe;
   margin-top: 200px;
   margin-left: 500px;
@@ -376,10 +418,10 @@ i.far.fa-user{
   padding: 20px;
   border: 1px solid #888;
   width: 30%;
-}
+} */
 
 /* The Close Button */
-.close {
+/* .close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
@@ -393,6 +435,6 @@ i.far.fa-user{
   cursor: pointer;
 }
 #msg{
-  font-family: 'Rajdhani', sans-serif;
-}
+  font-family: ''Rajdhani', sans-serif;
+} */
 

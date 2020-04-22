@@ -215,7 +215,7 @@ function searchRout(req, res) {
       maxProtein: '100',
       limitLicense: 'false',
       offset: '0',
-      number: '10'
+      number: '15'
     },
     headers: {
       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
