@@ -36,7 +36,7 @@ app.get('/result', calculater);
 app.get('/result1', usernameExist);
 app.post('/diet', getMeals);
 app.post('/meals', meals);
-app.put('/update/:id',updateInfo);
+app.put('/update/:id', updateInfo);
 
 
 
@@ -147,7 +147,7 @@ function usernameExist(req, res) {
 
           })
       }
-      else{
+      else {
         res.render('pages/calculate', { msg: 'This user name is not exist' });
       }
 
@@ -230,15 +230,15 @@ function searchRout(req, res) {
   });
 }
 
-function updateInfo(req,res){
+function updateInfo(req, res) {
   let unique = req.params.id;
-  let {weight,height,age} = req.body;
+  let { weight, height, age } = req.body;
   let SQL = 'UPDATE user_info SET weight=$1,height=$2,age=$3 WHERE user_name=$4;';
-  let safe = [weight,height,age,unique];
-  client.query(SQL,safe)
+  let safe = [weight, height, age, unique];
+  client.query(SQL, safe)
     .then(res.redirect(`/result1?previousUsername=${unique}`))
-  
-   
+
+
 }
 
 
@@ -261,19 +261,19 @@ app.get('*', (req, res) => {
   res.status(404).send('This route does not exist!!');
 })
 
-
-  app.listen(PORT, () => {
-    console.log(`Listening on PORT ${PORT}`)
-  })
-
-
-// client.connect()
-//   .then(() => {
-
-//   });
+client.connect()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Listening on PORT ${PORT}`)
+    })
+  });
 
 
-  
- 
+
+
+
+
+
+
 
 
