@@ -212,7 +212,7 @@ function searchRout(req, res) {
       maxProtein: '100',
       limitLicense: 'false',
       offset: '0',
-      number: '10'
+      number: '12'
     },
     headers: {
       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
@@ -257,12 +257,17 @@ function test(req, res) {
 app.get('*', (req, res) => {
   res.status(404).send('This route does not exist!!');
 })
-client.connect()
-  .then(() => {
+
+
   app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`)
   })
-  });
+
+
+// client.connect()
+//   .then(() => {
+
+//   });
 
 
   
