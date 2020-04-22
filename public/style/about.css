@@ -40,9 +40,7 @@ h1 {
 
 #about-h1 {
     font-family: monospace;
-     
     padding-top: 9%;
- 
 }
 
 .about_div2 {
@@ -57,7 +55,6 @@ h1 {
     margin-top: 20px;
     margin-bottom: 50px;
     box-shadow: 10px 10px 5px rgb(199, 159, 168);
-    
 }
 
 .names {
@@ -88,7 +85,8 @@ h5 {
     padding-top: 20px;
     padding-right: 25px;
 }
-.socialPerOne{
+
+.socialPerOne {
     display: inline-block;
     padding-bottom: 30px;
 }
@@ -308,40 +306,46 @@ button:active,
     text-decoration: none;
     margin-left: 20%;
 }
+
 .r:nth-of-type(1):before {
-    content:'\f09b';
-    }
-    .r:nth-of-type(2):before {
-    content:'\f099';
-    }
-    .r:nth-of-type(3):before {
-    content:'\f0e1';
-    }
-.r:hover .c {
-        bottom:50px;
-        visibility:visible;
-        opacity:1;
+    content: '\f09b';
 }
+
+.r:nth-of-type(2):before {
+    content: '\f099';
+}
+
+.r:nth-of-type(3):before {
+    content: '\f0e1';
+}
+
+.r:hover .c {
+    bottom: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+
 .r .c {
-    color:#666;
-    position:absolute;
-    font-family:sans-serif;
-    bottom:0;
-    left:-25px;
-    right:-25px;
-    padding:5px 7px;
-    z-index:-1;
-    font-size:14px;
-    border-radius:2px;
-    background:#fff;
-    visibility:hidden;
-    opacity:0;
-    -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #666;
+    position: absolute;
+    font-family: sans-serif;
+    bottom: 0;
+    left: -25px;
+    right: -25px;
+    padding: 5px 7px;
+    z-index: -1;
+    font-size: 14px;
+    border-radius: 2px;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -o-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  .r {
+}
+
+.r {
     color: #fff;
     background: #ce8ca1;
     border-radius: 4px;
@@ -356,8 +360,8 @@ button:active,
     margin: 17px 5px 0px 0px;
     transition: all .5s;
     -webkit-font-smoothing: antialiased;
-  }
-  
-  .r:hover {
+}
+
+.r:hover {
     background: #ef92a3;
-  }
+}

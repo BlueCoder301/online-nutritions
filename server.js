@@ -100,7 +100,7 @@ function calculater(req, res) {
           res.render('pages/results', { info: information });
         });
       } else {
-        console.log('the user name already exist');
+        res.render('pages/calculate', { msg: 'This user name is already exist' });
       }
 
 
@@ -146,6 +146,9 @@ function usernameExist(req, res) {
             });
 
           })
+      }
+      else{
+        res.render('pages/calculate', { msg: 'This user name is not exist' });
       }
 
     })
@@ -258,16 +261,14 @@ app.get('*', (req, res) => {
   res.status(404).send('This route does not exist!!');
 })
 
-
-  app.listen(PORT, () => {
+client.connect()
+  .then(() => {
+app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`)
   })
+  });
 
 
-// client.connect()
-//   .then(() => {
-
-//   });
 
 
   
