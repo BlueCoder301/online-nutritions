@@ -645,6 +645,15 @@ iframe {
     margin-left: -7px;
 }
 
+a.terms {
+    text-decoration: none;
+    color: #d4d0d0d6;
+}
+
+.terms:hover{
+    color: #cba3b1;
+}
+
 .social {
     display: inline-block;
     position: absolute;
@@ -893,5 +902,6 @@ iframe {
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
   
+
 
 
