@@ -147,6 +147,9 @@ function usernameExist(req, res) {
 
           })
       }
+      else{
+        res.render('pages/calculate', { msg: 'This user name is not exist' });
+      }
 
     })
 
@@ -176,7 +179,7 @@ function meals(req, res) {
       number: '10',
       random: true,
       maxCalories: calories,
-
+      
       limitLicense: 'false'
     },
     headers: {
