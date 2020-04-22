@@ -5,122 +5,131 @@
 <%- include('../layout/head') %>
 
 
-<body id="page">
-    <%- include('../layout/header') %>
-    <!---------------------------------------DATABASE INFORMATION----------------------------->
-    <main id="resMain">
-        <% if (locals.DB) { %>
-        <div class="container1">
-            <h1 class="h1">User Information</h1>
+    <body id="page">
+        <%- include('../layout/header') %>
+            <!---------------------------------------DATABASE INFORMATION----------------------------->
+            <main id="resMain">
+                <% if (locals.DB) { %>
+                    <div class="container1">
+                        <h1 class="h1">User Information</h1>
 
 
 
-            <% var x=''; %>
-            <% if(DB.gender == 'm')  x = 'Male'; %>
-            <% if(DB.gender == 'f')  x = 'Female'; %>
-            <form action="/update/<%= DB.user_name %>?_method=put" method="POST">
-                <p class="prevInf"> Username:<span> <%= DB.user_name%></span></p>
+                        <% var x=''; %>
+                            <% if(DB.gender == 'm')  x = 'Male'; %>
+                                <% if(DB.gender == 'f')  x = 'Female'; %>
+                                    <form action="/update/<%= DB.user_name %>?_method=put" method="POST">
+                                        <p class="prevInf"> Username:<span> <%= DB.user_name%></span></p>
 
-                <p class="prevInf">Weight: <span class="spann"> <%= DB.weight%></span><input type="text"
-                        name="weight" class="updateForm" value="<%= DB.weight%>" style="width: 30px;"></p>
-
-
-                <p class="prevInf">Height: <span class="spann"> <%= DB.height%></span> <input type="text"
-                        name="height" class="updateForm" value="<%= DB.height%>" style="width: 30px;"></p>
+                                        <p class="prevInf">Weight: <span class="spann"> <%= DB.weight%></span><input type="text" name="weight" class="updateForm" value="<%= DB.weight%>" style="width: 30px;"></p>
 
 
-                <p class="prevInf">Age: <span class="spann"> <%= DB.age%></span><input type="text" name="age"
-                        class="updateForm" value="<%= DB.age%>" style="width: 30px;"></p>
+                                        <p class="prevInf">Height: <span class="spann"> <%= DB.height%></span> <input type="text" name="height" class="updateForm" value="<%= DB.height%>" style="width: 30px;"></p>
 
 
-                <p class="prevInf">Gender: <%= x %></p>
-
-               <input type="submit" value="Save" class="updateForm hvr-pulse-shrink" id="saveB">
-            </form>
-            
-            
-            
-            
-            <div class="pen">
-            <i class="fal fa-user-edit"></i>
-           <input class="asidbtn" type="submit" value="UPDATE"> </div>
-
-           
-            <!-- -------upadate forms---- -->
+                                        <p class="prevInf">Age: <span class="spann"> <%= DB.age%></span><input type="text" name="age" class="updateForm" value="<%= DB.age%>" style="width: 30px;"></p>
 
 
-            <% } %>
-        </div>
-        <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
+                                        <p class="prevInf">Gender:
+                                            <%= x %>
+                                        </p>
+
+                                        <input type="submit" value="Save" class="updateForm hvr-pulse-shrink" id="saveB">
+                                    </form>
 
 
 
-        <!---------------------------------------Calculation INFORMATION-------------------------------->
 
-        <section class="container">
-            <!-- <h1>Previous Results:</h1> -->
-            <% if(locals.info){ %>
-
-            <div class="results">
-                <fieldset class="res">
-                    <legend class="data">Status:</legend>
-                    <h3><%= info.bmi.status%></h3>
-                </fieldset>
-            </div>
-            <div>
-                <div class="results">
-                    <fieldset class="res">
-                        <legend class="data">Ideal Weight:</legend>
-                        <h3><%= info.ideal_weight%></h3>
-                    </fieldset>
-
-                </div class="results">
-                <fieldset class="res">
-                    <legend class="data">Risk:</legend>
-                    <h3><%= info.bmi.risk%></h3>
-                </fieldset>
-            </div>
-
-            <div class="results">
-                <fieldset class="res">
-                    <legend class="data">Basal Metabolic Rate:</legend>
-                    <h3>Which is a minimum number of calories required for basic functions at rest :</h3>
-                    <h3> <%= info.bmr.value%></h3>
-                </fieldset>
-            </div>
-            <form class="radioDiet" action="/diet" method="POST">
-
-                <input class="diet hvr-pulse-shrink" type="submit" value="Lets start your diet">
-               
-    
-            </form>
-            <% } %> 
-
-            <!------------------------------------END OF Calculation INFORMATION------------------------------------------>
+                                    <div class="pen">
+                                        <i class="asidbtn1 fa fa-edit">
+                                            <!-- <input type="submit" value="UPDATE"> -->
+                                        </i>
+                                        <!-- <input class="asidbtn" type="submit" value="UPDATE"> -->
+                                    </div>
 
 
-        </section>
+                                    <!-- -------upadate forms---- -->
 
 
-        
+                                    <% } %>
+                    </div>
+                    <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
-        
 
-    </main>
-    <%- include('../layout/footer') %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.updateForm').hide();
-            $('.spann').show();
-            $('.asidbtn').on('click', function () {
-                $('.updateForm').toggle();
-                $('.spann').toggle();
-            })
-        })
 
-    </script>
+                    <!---------------------------------------Calculation INFORMATION-------------------------------->
 
-</body>
+                    <section class="container">
+                        <!-- <h1>Previous Results:</h1> -->
+                        <% if(locals.info){ %>
+
+                            <div class="results">
+                                <fieldset class="res">
+                                    <legend class="data">Status:</legend>
+                                    <h3>
+                                        <%= info.bmi.status%>
+                                    </h3>
+                                </fieldset>
+                            </div>
+                            <div>
+                                <div class="results">
+                                    <fieldset class="res">
+                                        <legend class="data">Ideal Weight:</legend>
+                                        <h3>
+                                            <%= info.ideal_weight%>
+                                        </h3>
+                                    </fieldset>
+
+                                </div class="results">
+                                <fieldset class="res">
+                                    <legend class="data">Risk:</legend>
+                                    <h3>
+                                        <%= info.bmi.risk%>
+                                    </h3>
+                                </fieldset>
+                            </div>
+
+                            <div class="results">
+                                <fieldset class="res">
+                                    <legend class="data">Basal Metabolic Rate:</legend>
+                                    <h3>Which is a minimum number of calories required for basic functions at rest :</h3>
+                                    <h3>
+                                        <%= info.bmr.value%>
+                                    </h3>
+                                </fieldset>
+                            </div>
+                            <form class="radioDiet" action="/diet" method="POST">
+
+                                <input class="diet hvr-pulse-shrink" type="submit" value="Lets start your diet">
+
+
+                            </form>
+                            <% } %>
+
+                                <!------------------------------------END OF Calculation INFORMATION------------------------------------------>
+
+
+                    </section>
+
+
+
+
+
+
+            </main>
+            <%- include('../layout/footer') %>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('.updateForm').hide();
+                        $('.spann').show();
+                        $('.asidbtn1').on('click', function() {
+                            $('.updateForm').toggle();
+                            $('.spann').toggle();
+                        })
+                    })
+                </script>
+
+    </body>
 
 </html>
