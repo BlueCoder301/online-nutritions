@@ -811,6 +811,15 @@ iframe {
     background-size: cover;
 }
 
+a.terms {
+    text-decoration: none;
+    color: white;
+}
+
+.terms:hover{
+    color: rgb(219, 181, 181);
+}
+
 .parallax2 {
     /* The image used */
     background-image: url('../img/photo1.jpg');
