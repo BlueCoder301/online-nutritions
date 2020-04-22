@@ -3,7 +3,9 @@
 } */
 
 main {
-    z-index: -4;
+    /* z-index: -4; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
 }
 
 body {
@@ -80,17 +82,19 @@ img#logo {
 
 .choseDite {
     position: absolute;
-    top: 20%;
+    /* top: 20%; */
     text-align: center;
     padding-left: 45%;
     padding-top: 2%;
     display: inline-grid;
+    background-image: url('../img/Inkedbg-7_LI.jpg');
+    background-size: cover;
+    width: 55%;
+    height: 90%;
+  
+
 }
 
-#choseH4 {
-    padding-top: 10%;
-    
-}
 
 .labalDite {
     display: flex;
@@ -99,11 +103,6 @@ img#logo {
 
 .float-left {
     float: left;
-}
-
-button#submit {
-    margin-top: 20%;
-    margin-bottom: 18%;
 }
 
 .float-right {
@@ -218,17 +217,21 @@ and also iPads specifically.
     }
 }
 
-button {
-    /* z-index: -1; */
-    width: 100%;
-    height: 30px;
+.calc {
+    line-height: 30px;
     border: none;
-    background-color: #97434d;
     cursor: pointer;
+    width: 200px;
+    background-color: #97434d;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: larger;
+    font-family: sans-serif;
 }
 
-button:hover {
-    border-radius: 50px;
+.calc:hover {
+    background-color: #d49aa1;
 }
 
 
@@ -623,4 +626,58 @@ iframe {
     position: absolute;
     top: 58%;
     left: 7%;
+}
+
+fieldset {
+   
+    color: #c96e77;
+    border-radius: 5px;
+    width: 450px;
+    height: 450px;
+    border: solid 1pt #f7c0c6;
+    box-sizing: border-box;
+    margin-left: -128px;
+    margin-top: 115px;
+    background: #f5f5f58a;
+
+     
+  }
+  .gender{
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+    height: 20px;
+    width: 20px;
+    color: #f7c0c6;
+  }
+  
+  .labeles{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold; 
+   margin-left:20px;
+   padding-bottom: 50px;
+   font-size: larger;
+   
+ }
+.bodyy{
+    text-align: left;
+font-weight: bold;
+font-family: 'Rajdhani', sans-serif;
+font-size: large;
+ color: #c96e77;
+ 
+}
+
+.leftLabel {
+    margin-bottom: 35px;
+}
+.fix{
+    margin-left: -21px;
+}
+.hi{
+    margin-left: -42px;
+}
+.veg{
+    margin-right: 1px;
+
 }
