@@ -25,7 +25,7 @@ img#logo {
   text-transform: uppercase;
   color: white;
   font-size: 20px;
-  font-family: monospace;
+  font-family: 'Rajdhani', sans-serif;
   letter-spacing: 2px;
   font-weight: 600;
   padding: 25px;
@@ -261,7 +261,7 @@ font-size: large;
     background-color: #d49aa1;;
  }
  .labeles{
-    font-family: monospace;
+    font-family: 'Rajdhani', sans-serif;
     font-weight: bold; 
    margin-left:20px;
    
@@ -282,12 +282,12 @@ font-size: large;
 /*-------------- footer section ---------------*/
 .footer .footer-content h1, .footer .footer-content h2 {
   color: rgb(87, 82, 86);
-  font-family: monospace;
+  font-family: 'Rajdhani', sans-serif;
 }
 .footer .footer-content .about h1 span {
   color: rgb(206, 140, 161);
   margin-right: -4%;
-  font-family: monospace;
+  font-family: 'Rajdhani', sans-serif;
 }
 /* 
 .footer {
@@ -435,6 +435,6 @@ font-size: large;
   cursor: pointer;
 }
 #msg{
-  font-family: 'Rajdhani', sans-serif;
+  font-family: ''Rajdhani', sans-serif;
 } */
 
