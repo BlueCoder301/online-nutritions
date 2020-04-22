@@ -28,18 +28,18 @@
                 <br>
                 <div>
                     <label class="labeles" for="weight">Weight :</label>
-                    <input type="text" class="user1" id="weight" name="weight" placeholder="Your weight in Kg ex:65"
+                    <input type="number" class="user1" id="weight" name="weight" placeholder="Your weight in Kg ex:65"
                         required>
                 </div>
                 <br>
                 <div>
                     <label class="labeles" for="height"> Height :</label>
-                    <input type="text" class="user2" id="height" name="height" placeholder="Your height in cm ex:165"
+                    <input type="number" class="user2" id="height" name="height" placeholder="Your height in cm ex:165"
                         required>
                 </div>
                 <br>
                 <label class="labeles" for="age"> Age :</label>
-                <input type="text" class="user3" id="age" name="age" placeholder="Your age ex:20" required>
+                <input type="number" class="user3" id="age" name="age" placeholder="Your age ex:20" required>
                 <br>
 
                 <label class="labeles" for="gender"> Gender :</label>
@@ -84,7 +84,7 @@
 
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h4 class="msg">This user name is already exist</h4>
+                <h4 class="msg"><%= msg%></h4>
             </div>
 
         </div>

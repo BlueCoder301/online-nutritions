@@ -77,10 +77,8 @@
 
 
         <div class="meals-section2">
-
-            <p class="examples" data-aos="fade-up">
-                Examples of what our website can provide you for meals information
-            </p>
+            <% if(locals.meal1) { %>
+            
 
             <div class="second-meal2">
                 <div class="wrapper">
@@ -120,9 +118,9 @@
                                 <p>Details</p>
                             </a>
                             <div class="content2">
-                                <p><strong>Calories: </strong> A single serving has 402 calories.</p><br>
-                                <p><strong>Fats: </strong> 14.3g</p><br>
-                                <p><strong>Protein</strong> 3.8g </p>
+                                <p><strong>Title: </strong> <%= meal1[0].title %></p><br>
+                                <p><strong>Calories: </strong><%= meal1[0].calories %></p><br>
+                                <p><strong>Protein</strong> <%= meal1[0].protein %> </p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +132,7 @@
             <div class="first-meal2">
                 <div class="wrapper">
                     <div class="food2">
-                        <div class="cover2" style="background-image:url(img/meal2b.jpg)">
+                        <div class="cover2" style="background-image:url('<%= meal1[1].image %>')">
                             <label>
                                 <i>
 
@@ -154,7 +152,7 @@
                                         </g>
                                     </svg>
                                 </i>
-                                <p>Salmon</p>
+                                <p>Meal II</p>
                             </label>
                         </div>
                         <div class="info2">
@@ -169,9 +167,10 @@
                                 <p>Details</p>
                             </a>
                             <div class="content2">
-                                <p><strong>Calories: </strong> A single serving has 557 calories.</p><br>
-                                <p><strong>Fats: </strong> 21.2g</p><br>
-                                <p><strong>Protein</strong> 25.4g </p>
+                                <p><strong>Title: </strong> <%= meal1[1].title %></p><br>
+                                <p><strong>Calories: </strong><%= meal1[1].calories %></p><br>
+                                
+                                <p><strong>Protein</strong> <%= meal1[1].protein %> </p>
                             </div>
                         </div>
                     </div>
@@ -182,7 +181,7 @@
             <div class="third-meal3">
                 <div class="wrapper">
                     <div class="food2">
-                        <div class="cover3" style="background-image:url(img/meal1.jpg)">
+                        <div class="cover3" style="background-image:url('<%= meal1[2].image %>')">
                             <label>
                                 <i>
 
@@ -202,7 +201,7 @@
                                         </g>
                                     </svg>
                                 </i>
-                                <p>salad</p>
+                                <p>Meal III</p>
                             </label>
                         </div>
                         <div class="info3">
@@ -217,9 +216,10 @@
                                 <p>Details</p>
                             </a>
                             <div class="content3">
-                                <p><strong>Calories: </strong> A single serving has 402 calories.</p><br>
-                                <p><strong>Fats: </strong> 14.3g</p><br>
-                                <p><strong>Protein</strong> 3.8g </p>
+                                <p><strong>Title: </strong> <%= meal1[2].title %></p><br>
+                                <p><strong>Calories: </strong><%= meal1[2].calories %></p><br>
+                                
+                                <p><strong>Protein</strong> <%= meal1[2].protein %> </p>
                             </div>
                         </div>
                     </div>
@@ -229,7 +229,9 @@
 
 
 
+            <% } %>
         </div>
+
     </main>
 
 
