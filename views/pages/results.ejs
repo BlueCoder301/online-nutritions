@@ -11,7 +11,7 @@
     <main id="resMain">
 
         <aside class="container1">
-            <h1 class="h1">User Information :</h1>
+            <h1 class="h1">User Information</h1>
 
 
             <% if (locals.DB) { %>
@@ -21,23 +21,6 @@
             <form action="/update/<%= DB.user_name %>?_method=put" method="POST">
                 <p class="prevInf">Your username:<span> <%= DB.user_name%></span></p>
 
-<<<<<<< HEAD
-            <p class="prevInf"> Username: <%= DB.user_name%><input type="text" class="updateForm" value="<%= DB.user_name%>"> </p>
-
-            <p class="prevInf">Weight: <%= DB.weight%><input type="text" class="updateForm" value="<%= DB.weight%>"></p>
-            
-
-            <p class="prevInf">Height: <%= DB.height%> <input type="text" class="updateForm" value="<%= DB.height%>"></p>
-           
-
-            <p class="prevInf">Age: <%= DB.age%><input type="text" class="updateForm" value="<%= DB.age%>"></p>
-            
-
-            <p class="prevInf" >Gender: <%= x %><input type="text" class="updateForm" value=" <%= x %>"></p>
-            
-        
-        
-=======
                 <p class="prevInf">your weight: <span class="spann"> <%= DB.weight%></span><input type="text"
                         name="weight" class="updateForm" value="<%= DB.weight%>" style="width: 30px;"></p>
 
@@ -48,13 +31,12 @@
 
                 <p class="prevInf">Your age: <span class="spann"> <%= DB.age%></span><input type="text" name="age"
                         class="updateForm" value="<%= DB.age%>" style="width: 30px;"></p>
->>>>>>> d6a3b453cfb42e6d2518a90585003a05449dde64
 
 
                 <p class="prevInf">Your gender: <%= x %></p>
 
-                <center><input type="submit" value="Save" class="updateForm" id="saveB"></center>
-
+               <input type="submit" value="Save" class="updateForm" id="saveB">
+<!-- <i class="far fa-pen"></i> -->
             </form>
 
 
@@ -63,7 +45,7 @@
 
 
 
-            <center><input class="asidbtn" type="submit" value="UPDATE"></center>
+           <input class="asidbtn" type="submit" value="UPDATE">
             <!-- -------upadate forms---- -->
 
 
@@ -82,28 +64,28 @@
             <div class="results">
                 <fieldset class="res">
                     <legend class="data">Status:</legend>
-                    <h2><%= info.bmi.status%></h2>
+                    <h3><%= info.bmi.status%></h3>
                 </fieldset>
             </div>
             <div>
                 <div class="results">
                     <fieldset class="res">
                         <legend class="data">Ideal Weight:</legend>
-                        <h2><%= info.ideal_weight%></h2>
+                        <h3><%= info.ideal_weight%></h3>
                     </fieldset>
 
                 </div class="results">
                 <fieldset class="res">
                     <legend class="data">Risk:</legend>
-                    <h2><%= info.bmi.risk%></h2>
+                    <h3><%= info.bmi.risk%></h3>
                 </fieldset>
             </div>
 
             <div class="results">
                 <fieldset class="res">
                     <legend class="data">Basal Metabolic Rate:</legend>
-                    <h2>Which is a minimum number of calories required for basic functions at rest :</h2>
-                    <h2> <%= info.bmr.value%></h2>
+                    <h3>Which is a minimum number of calories required for basic functions at rest :</h3>
+                    <h3> <%= info.bmr.value%></h3>
                 </fieldset>
             </div>
             <% } %>

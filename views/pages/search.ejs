@@ -3,36 +3,40 @@
 
 
   <%- include('../layout/head') %>
-<!-- <link rel="stylesheet" href="style/search.css"> -->
+
 
 <body class="searchBody">
-  <main class="mainSearch">
     <%- include('../layout/header') %>
-        
-            <div class="container2">
+    <main class="mainSearch">
+               <!-- <h1> Recipes with :</h1> -->
+        <% food.results.forEach(val=>{ %>
 
-                <% food.results.forEach(val=>{ %>
-                <div class="center-div"></div>
-                <div class=" box-one "></div>
-                <div class="bgimg box">
+            <div data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500" class="searchPage ">
+              
 
-                  <img src="<%= val.image %>" ></div>
-                <div class="skew"></div>
-                
-                
-                  <ul>
-                   <li>Title: <%= val.title%></li> 
+                <img src="<%= val.image %>" class="hvr-bounce-out">
+                <div>
+                <ul class="nutri">
+                  <li>Title: <%= val.title%></li>
+                  <li>Calories: <%= val.calories%></li>
+                  <li>Protein: <%= val.protein%></li>
+                  <li>Fat: <%= val.fat%></li>
                   <li>Carbs: <%= val.carbs%></li>
-                   <li>Fat: <%= val.fat%></li> 
-                 <li>  Protein: <%= val.protein%></li> 
-                    <li>Calories: <%= val.calories%></li> 
-                  </ul>
-           
+                </ul></div>
+            </div>
         <%})%>
-   
+    </main>
+    
+
+
+
     <%- include('../layout/footer') %>
     <%- include('../layout/js-links') %>
-    </main>
+    <script >
+      AOS.init();
+    </script>
 </body>
 
 </html>

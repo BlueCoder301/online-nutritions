@@ -3,108 +3,67 @@
 .searchBody{
   height:100%;
   width: 100%;
+  /* background-image: url("https://mcdn.wallpapersafari.com/medium/81/63/vYo0n3.jpg"); */
+  /* background-repeat: no-repeat; */
 
 }
 .mainSearch{
 
-  height: 120vh;
+ height: 240vh;
+
 }
-.container2{
-    /* display: grid;
-    grid-template-columns: 500px 500px 500px;
-    grid-template-rows: 400px 400px 400px 400px 400px; */
-    max-width: 760px;
-    max-height: 600px;
-    margin: auto;
-    margin-top: 10;
+/* **************************************************************************************** */
+
+ .searchPage{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 14%;
+  margin-left: 88px;
+  float: left;
+  width: min-content;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  border: 2px solid rgb(206, 97, 142) ;
+  border-radius: 30px;
+  font-family: 'Baskervville', serif;
+  margin-bottom: -8%;
+  background-color: #e6d7d9;
+} 
+.searchPage img{
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+  margin-left: -4%;
+  border-radius: 23px;
+}
+.nutri{
+ float: left; 
+ width: -webkit-fill-available;
+ margin-left: 10%;
+ list-style: none;
+ font-family: monospace;
+ list-style: none;
+color:#97434d ;
+font-size: large;
+font-weight: bold;
 }
 
-.box-one{
-    grid-column: 1/2;
-    grid-row : 1/2;
-  }
 
-
-
-   .center-div .bgimg {
-      background-image: url('img/one.jpeg');
-      background-size: cover;
-      background-position: center center;
-    }
-  
-    .center-div .box {
-        margin: 30px 0 0 0;
-        position: relative;
-        width: 301px;
-        height: 300px;
-        overflow: hidden;
-    }
-      .center-div .bgimg .skew {
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 50%;
-        z-index: 20;
-      }
-        .center-div .bgimg .skew:before {
-          background: #ad6999;
-          box-shadow: -5px 0 10px rgba(0,0,0,0.2);
-          content: "";
-          display: block;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          right: 0;
-          transform: skew(10deg);
-          width: 100%;
-          z-index: -1;
-          transition: top 500ms linear, right 500ms linear;
-        }
-        .center-div .bgimg .skew:after {
-          background: #ad6999;
-          box-shadow: -5px 0 10px rgba(0,0,0,0.2);
-          content: "";
-          display: block;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          right: 0;
-          transform: skew(-10deg);
-          width: 100%;
-          z-index: -2;
-          transition: top 500ms linear, right 500ms linear;
-        }
-        .center-div .bgimg .skew .content8 {
-          position: relative;
-          opacity: 1;
-          width: 100%;
-          height: 100%;
-          transition: opacity 300ms linear;
-        }
-          .center-div .bgimg .skew .content8 span {
-            font-size: 16px;
-            line-height: 20px;
-            text-align: center;
-            text-transform: uppercase;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            color: #20478a;
-            letter-spacing: 0.15em;
-            text-shadow: 2px 2px 5px #ad885b;
-          }
-        
-      .center-div .bgimg .skew:hover::before {
-            top: -100%;
-            right: 21%;
-          }
-          .center-div .bgimg .skew:hover::after{
-            top: 100%;
-            right: 21%;
-          }
-          .center-div .bgimg .skew .content8 {
-            opacity: 0;
-          } 
+.hvr-bounce-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-out:hover, .hvr-bounce-out:focus, .hvr-bounce-out:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
 
