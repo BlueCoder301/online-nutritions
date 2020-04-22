@@ -6,7 +6,12 @@
 
 
 <body class="searchBody">
+
+ 
     <%- include('../layout/header') %>
+    <p class="search-title" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"> Here are the search result for <%= search  %></p>
     <main class="mainSearch">
                <!-- <h1> Recipes with :</h1> -->
         <% food.results.forEach(val=>{ %>
