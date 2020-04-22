@@ -433,7 +433,8 @@ span.right-text {
 
 p.search-title {
     font-size: 26px;
-    font-family: 'Solway', serif;
+    font-family: monospace;
+    font-weight: 900;
     position: absolute;
     color: #96434d;
     top: 19%;
@@ -443,7 +444,8 @@ p.search-title {
 
 p.examples {
     font-size: 26px;
-    font-family: 'Solway', serif;
+    font-family: monospace;
+    font-weight: 900;
     text-align: center;
     position: absolute;
     top: 289%;
@@ -516,7 +518,8 @@ p.examples {
 p.video1 {
     font-size: 28px;
     font-weight: 700;
-    font-family: 'Solway', serif;
+    font-family: monospace;
+    font-weight: 900;
     text-align: center;
     position: absolute;
     margin-top: 2%;
