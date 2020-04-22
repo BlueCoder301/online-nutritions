@@ -10,7 +10,7 @@
     <!---------------------------------------DATABASE INFORMATION----------------------------->
     <main id="resMain">
         <% if (locals.DB) { %>
-        <aside class="container1">
+        <div class="container1">
             <h1 class="h1">User Information</h1>
 
 
@@ -19,38 +19,38 @@
             <% if(DB.gender == 'm')  x = 'Male'; %>
             <% if(DB.gender == 'f')  x = 'Female'; %>
             <form action="/update/<%= DB.user_name %>?_method=put" method="POST">
-                <p class="prevInf">Your username:<span> <%= DB.user_name%></span></p>
+                <p class="prevInf"> Username:<span> <%= DB.user_name%></span></p>
 
-                <p class="prevInf">your weight: <span class="spann"> <%= DB.weight%></span><input type="text"
+                <p class="prevInf">Weight: <span class="spann"> <%= DB.weight%></span><input type="text"
                         name="weight" class="updateForm" value="<%= DB.weight%>" style="width: 30px;"></p>
 
 
-                <p class="prevInf">Your height: <span class="spann"> <%= DB.height%></span> <input type="text"
+                <p class="prevInf">Height: <span class="spann"> <%= DB.height%></span> <input type="text"
                         name="height" class="updateForm" value="<%= DB.height%>" style="width: 30px;"></p>
 
 
-                <p class="prevInf">Your age: <span class="spann"> <%= DB.age%></span><input type="text" name="age"
+                <p class="prevInf">Age: <span class="spann"> <%= DB.age%></span><input type="text" name="age"
                         class="updateForm" value="<%= DB.age%>" style="width: 30px;"></p>
 
 
-                <p class="prevInf">Your gender: <%= x %></p>
+                <p class="prevInf">Gender: <%= x %></p>
 
-               <input type="submit" value="Save" class="updateForm" id="saveB">
-<!-- <i class="far fa-pen"></i> -->
+               <input type="submit" value="Save" class="updateForm hvr-pulse-shrink" id="saveB">
             </form>
+            
+            
+            
+            
+            <div class="pen">
+            <i class="fal fa-user-edit"></i>
+           <input class="asidbtn" type="submit" value="UPDATE"> </div>
 
-
-
-
-
-
-
-           <input class="asidbtn" type="submit" value="UPDATE">
+           
             <!-- -------upadate forms---- -->
 
 
             <% } %>
-        </aside>
+        </div>
         <!-------------------------------------END OF DATABASE INFORMATION---------------------------->
 
 
@@ -84,11 +84,7 @@
             <div class="results">
                 <fieldset class="res">
                     <legend class="data">Basal Metabolic Rate:</legend>
-<<<<<<< HEAD
                     <h3>Which is a minimum number of calories required for basic functions at rest :</h3>
-=======
-                    <span>which is a minimum number of calories required for basic functions at rest :</span>
->>>>>>> 764cc475d8ee4fa087df02a73c6e8cf70167ede6
                     <h3> <%= info.bmr.value%></h3>
                 </fieldset>
             </div>
@@ -104,7 +100,7 @@
         <form class="radioDiet" action="/diet" method="POST">
 
 
-            <input class="diet" type="submit" value="Lets start your diet">
+            <input class="diet hvr-pulse-shrink" type="submit" value="Lets start your diet">
 
         </form>
 
