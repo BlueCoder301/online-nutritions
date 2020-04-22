@@ -1,11 +1,13 @@
 #page {
     height: 100%;
     width: 100%;
-    background-image: url('https://www.pinterest.com/pin/734579389205856017/feedback/?invite_code=2d7d95ad9e1243ed874356811b503f75&sender_id=795378121598607437');
+    /* background-image: url('https://image.freepik.com/free-photo/toasted-bread-fresh-fruits-vegetables-ingredients-arranged-table_23-2148026885.jpg');
+background-repeat: no-repeat;
+background-size: cover; */
 }
 
 #resMain {
-    height: 110vh;
+    height: 131vh;
 }
 
 .data {
@@ -23,7 +25,8 @@
     background-repeat: no-repeat;
     position: absolute;
     top: 47%;
-    margin-left: 260px;
+    margin-left: 255px;
+    border-radius: 5px;
 }
 
 .res {
@@ -62,9 +65,9 @@
     font-family: sans-serif;
     /* float: right; */
     background-color: #97434d;
-    margin-left: -50%;
+    margin-left: -45%;
     position: absolute;
-    top: 100%;
+    top: 109%;
 }
 
 .diet:hover {
