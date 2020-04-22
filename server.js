@@ -261,16 +261,14 @@ app.get('*', (req, res) => {
   res.status(404).send('This route does not exist!!');
 })
 
-
-  app.listen(PORT, () => {
+client.connect()
+  .then(() => {
+app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`)
   })
+  });
 
 
-// client.connect()
-//   .then(() => {
-
-//   });
 
 
   
