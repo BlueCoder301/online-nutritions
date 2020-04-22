@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Solway:wght@700&display=swap');
 
 /* ---------------------   slider   --------------------- */
@@ -291,12 +290,7 @@ svg.hvr-grow {
     text-shadow: 2px 2px 4px rgb(199, 159, 168);
 }
 
-
-
-
-
-.calculator:hover{
-
+.calculator:hover {
     background-color: #d49aa1;
 }
 
@@ -352,7 +346,6 @@ svg#Capa_1 {
     margin-left: 28%;
     margin-bottom: 5%;
 }
-
 
 span.right-text {
     float: right;
@@ -438,7 +431,6 @@ span.right-text {
     opacity: 0.7;
 }
 
-
 p.search-title {
     font-size: 26px;
     font-family: 'Solway', serif;
@@ -448,7 +440,6 @@ p.search-title {
     left: 32%;
     text-shadow: 2px 2px 1px rgba(132, 131, 131, 0.575);
 }
-
 
 p.examples {
     font-size: 26px;
@@ -532,7 +523,6 @@ p.video1 {
     margin-left: 37%;
     color: #96434d;
     text-shadow: 2px 2px 1px rgba(132, 131, 131, 0.575);
-
 }
 
 #video-section iframe {
@@ -594,7 +584,6 @@ p.video1 {
     margin-top: 17px;
     font-size: 19px;
 }
-
 
 .footer .footer-content .about .contact span {
     display: block;
@@ -724,28 +713,27 @@ iframe {
     color: #694752;
 }
 
-.second-text{
-        width: 400px;
-        /* float: left; */
-        /* margin-left: 115px; */
-        /* margin-top: -27%; */
-        margin-bottom: 53%;
-        font-size: 20px;
-        text-align: left;
-        font-size: 20px;
-        /* font-size: 23px; */
-        font-family: monospace;
-        /* text-align: center; */
-        /* margin-right: 104px; */
-        margin-top: -3%;
-        font-size: 18px;
-        text-align: left;
-        font-family: monospace;
-        /* font-family: cursive; */
-        font-weight: 700;
-        color: rgb(100, 65, 65);
-        text-shadow: 2px 2px 4px rgb(199, 159, 168);
-    
+.second-text {
+    width: 400px;
+    /* float: left; */
+    /* margin-left: 115px; */
+    /* margin-top: -27%; */
+    margin-bottom: 53%;
+    font-size: 20px;
+    text-align: left;
+    font-size: 20px;
+    /* font-size: 23px; */
+    font-family: monospace;
+    /* text-align: center; */
+    /* margin-right: 104px; */
+    margin-top: -3%;
+    font-size: 18px;
+    text-align: left;
+    font-family: monospace;
+    /* font-family: cursive; */
+    font-weight: 700;
+    color: rgb(100, 65, 65);
+    text-shadow: 2px 2px 4px rgb(199, 159, 168);
 }
 
 .contact {
